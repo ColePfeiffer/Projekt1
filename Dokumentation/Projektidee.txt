@@ -1,0 +1,8 @@
+#### Projektidee für Projekt 1: Tool zur Erstellung von Nichtspielercharakteren für ein Pen & Paper-System (Midgard)
+
+Ich bin ein großer P&P-Rollenspielfan. Als Spielleiter ist es für fast jedes eigene Abenteuer nötig, sich Nichtspielercharaktere auszudenken, die häufig nur in einem Abenteuer auftauchen und somit den Aufwand der Erstellung kaum "rechtfertigen". 
+
+Ich würde gerne ein Tool entwickeln, das sich um das Auswürfeln der Werte kümmert und zudem verschiedene Optionen zur Anpassung ans jeweilige Abenteuer oder Setting mitbringt. Gleichzeitig sollte die Anwendung die Möglichkeit mitbringen Charakterhintergrund zu generieren. Schön fände ich außerdem eine Speicherfunktion für erstellte Figuren, um diese auch nachträglich bearbeiten zu können.
+
+
+(Anmerkung: Ich bin mir nicht ganz sicher, ob meine Projektidee alle Anforderungen erfüllen würde. Es gibt bereits Charaktergeneratoren im Internet - meistens sind diese aber sehr rudimentär gehalten und für mich uninteressant. Fast alle beziehen sich auf verbreitere Systeme und berechnen lediglich die Würfelwerte, aber nichts darüber hinaus - sind also sehr limitiert in ihrer Funktion. Freu mich aufs Feedback und auf die Arbeit am Projekt. LG!)

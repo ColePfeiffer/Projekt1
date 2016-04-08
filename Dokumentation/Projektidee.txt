@@ -1,8 +1,16 @@
-#### Projektidee für Projekt 1: Tool zur Erstellung von Nichtspielercharakteren für ein Pen & Paper-System (Midgard)
+#### Projektidee fÃ¼r Projekt 1: Tool zur Erstellung von Nichtspielercharakteren fÃ¼r ein Pen & Paper-System (Midgard)
 
-Ich bin ein großer P&P-Rollenspielfan. Als Spielleiter ist es für fast jedes eigene Abenteuer nötig, sich Nichtspielercharaktere auszudenken, die häufig nur in einem Abenteuer auftauchen und somit den Aufwand der Erstellung kaum "rechtfertigen". 
+Kurz und knapp: Ich bin ein groÃŸer P&P-Rollenspielfan. Als Spielleiter ist es fÃ¼r fast jedes eigene Abenteuer nÃ¶tig, sich Nichtspielercharaktere auszudenken, die hÃ¤ufig nur in einem Abenteuer auftauchen und somit den Aufwand der Erstellung kaum rechtfertigen. 
 
-Ich würde gerne ein Tool entwickeln, das sich um das Auswürfeln der Werte kümmert und zudem verschiedene Optionen zur Anpassung ans jeweilige Abenteuer oder Setting mitbringt. Gleichzeitig sollte die Anwendung die Möglichkeit mitbringen Charakterhintergrund zu generieren. Schön fände ich außerdem eine Speicherfunktion für erstellte Figuren, um diese auch nachträglich bearbeiten zu können.
+Ich wÃ¼rde gerne ein Tool entwickeln, das sich einerseits um das AuswÃ¼rfeln der Werte kÃ¼mmert und andererseits einen interaktiven Charakterhintergrundgenerator darstellen soll. Die Anwendung sollte Optionen zur Anpassung ans jeweilige Abenteuer oder Setting mitbringen. Bereits erstellte Charaktere sollen speicherbar oder importierbar und so eine nachtrÃ¤gliche Bearbeitung ermÃ¶glichen. 
 
+Elemente:
+- mehrere, vom Nutzer editierbare Textfelder zur Ausgabe/Anzeige; also so, dass der User nach dem Generieren einfach Ã„nderungen vornehmen kann; Neuberechnung einzelner Elemente per Button oder Markierfunktion
+- DropdownmenÃ¼(s)/Elemente zur Anpassung ans Setting und zur Auswahl von bestimmten Stereotypen oder Kategorien
+- Benutzerkonto und Loginfunktion oder Funktion zum Importieren und Exportieren von Figuren 
+- logische und nachvollziehbare VerknÃ¼pfung von beschreibenen Elementen; Unterteilung in verschiedene Pools
+- Nutzer sollen selbst neue Stichworte oder Anpassungsoptionen hinzufÃ¼gen kÃ¶nnen (eventuell auch die MÃ¶glichkeit neue Spielsysteme zu implementieren); diese ZusÃ¤tze sollen dann importiert/exportiert werden kÃ¶nnen, sodass sie teilbar sind
+- eventueller Bilderupload fÃ¼r Charakterbilder
+- erweiterbar ...
 
-(Anmerkung: Ich bin mir nicht ganz sicher, ob meine Projektidee alle Anforderungen erfüllen würde. Es gibt bereits Charaktergeneratoren im Internet - meistens sind diese aber sehr rudimentär gehalten und für mich uninteressant. Fast alle beziehen sich auf verbreitere Systeme und berechnen lediglich die Würfelwerte, aber nichts darüber hinaus - sind also sehr limitiert in ihrer Funktion. Freu mich aufs Feedback und auf die Arbeit am Projekt. LG!)
+(Anmerkung: Es gibt bereits Charaktergeneratoren im Internet - meistens sind diese aber sehr rudimentÃ¤r und fÃ¼r mich uninteressant. Fast alle beziehen sich auf verbreitetere Systeme und berechnen lediglich die WÃ¼rfelwerte, aber kÃ¶nnen nichts darÃ¼ber hinaus - sind also sehr limitiert in ihrer Funktion. Freu mich aufs Feedback und auf die Arbeit am Projekt. LG!)

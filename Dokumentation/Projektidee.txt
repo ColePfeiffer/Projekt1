@@ -1,4 +1,4 @@
-=== Projektidee ColePfeiffer, 2016-04-12 ===
+﻿=== Projektidee ColePfeiffer, 2016-04-12 ===
 
 #### Projektidee für Projekt 1: Tool zur Erstellung von Nichtspielercharakteren für ein Pen & Paper-System (Midgard)
 
@@ -14,6 +14,17 @@ Elemente:
 - Nutzer sollen selbst neue Stichworte oder Anpassungsoptionen hinzufügen können (eventuell auch die Möglichkeit neue Spielsysteme zu implementieren); diese Zusätze sollen dann importiert/exportiert werden können, sodass sie teilbar sind
 - eventueller Bilderupload für Charakterbilder
 - erweiterbar ...
+
+//Anmerkung Moritz Stoll
+ggf. wären sinnvoll:
+- Log-In-Maske( eingabe Username, Passowrt und Bestätigung)
+- Tabellen um auswahl aus Kategorien in den Dropdownmenüs darzustellen
+- die Möglichkeit über eine Schaltfläche ein PDF des Charakterbogens zu erzeugen
+- ein Speicherbutton
+- eine Übersicht aller gespeicherten und importierten Charaktere (wenn du dich dafür entscheidest)
+- Schaltflächen (Links) wenn andere Dropdownmenüs oder Ansichten geöffnet werden
+(am Rande: coole Idee!)
+
 
 (Anmerkung: Es gibt bereits Charaktergeneratoren im Internet - meistens sind diese aber sehr rudimentär und für mich uninteressant. Fast alle beziehen sich auf verbreitetere Systeme und berechnen lediglich die Würfelwerte, aber können nichts darüber hinaus - sind also sehr limitiert in ihrer Funktion. Freu mich aufs Feedback und auf die Arbeit am Projekt. LG!)
 

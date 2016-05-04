@@ -107,3 +107,30 @@ Es ist dabei sehr wahrscheinlich, dass Sie (vielleicht auch erst später währen
 
 Viele Grüße,
 Markus Alpers
+
+===================================
+=== Feedback Alpers, 2016-05-04 ===
+===================================
+
+Leider haben Sie an dieser Stelle die Beschreibung noch nicht weiter konkretisiert. Das ist aber wichtig, da die Beschreibung an essentiellen Stellen noch zu allgemein formuliert ist. Hier ein Beispiel:
+- logische und nachvollziehbare Verknüpfung von beschreibenen Elementen; Unterteilung in verschiedene Pools
+Das ist ein netter Marketingslogan, sagt aber gerade nicht aus, wie die logischen Verknüpfungen aussehen. Es sagt auch nichts darüber aus, warum die nachvollziehbar sein sollen. Und was sind die Kriterien, nach denen die Pools erzeugt werden? Genau diese Punkte müssen aber geklärt sein, bevor Sie auch nur mit der Strukturierung der Software anfangen. Seien Sie sich insbesondere darüber im Klaren, dass es für neue Teammitglieder möglich sein muss, die Beschreibungen ohne große Erklärungen wie geplant umzusetzen.
+
+Arbeiten Sie deshalb die Beschreibung zuallererst einmal konzentriert durch und formulieren Sie konkret aber knapp aus, was genau das Projekt ausmacht.
+
+Beachten Sie außerdem die folgenden beiden Punkte:
+
+(1) Interaktion zwischen NutzerInnen und Programm. Lesen Sie dazu meine Ausführung unter http://www.elearning.haw-hamburg.de/mod/book/view.php?id=607850&chapterid=1846
+
+(2) Webbasiert: Momentan ist es für das Spiel vollkommen irrelevant, ob der Rechner vernetzt ist oder nicht. Es soll aber ein zentrales Element sein, dass das Programm vernetzt (aka webbasiert) ist. Die einfachste Möglichkeit dafür besteht darin, dass mehrere Spieler gleichzeitig in einer Spielwelt unterwegs sind, bzw. bei Ihrem Projekt, dass mehrere Meister gemeinsam an einem Abenteuer arbeiten. Ein gutes Konzept wäre in dieser Hinsicht eines, bei dem NutzerInnen genauso miteinander wie mit dem Programm interagieren (siehe 1).
+
+Wertung 2: Projektbeschreibung: gesamt: 2 / 10
+- Pro Interaktionsmöglichkeit: 0 (denn momentan haben Sie zwar grundsätzlich konzipiert, wozu die Anwendung dienen soll, aber die eigentliche Interaktion fehlt noch)
+- Knappe aber klare Beschreibung: 5 (Die Zusammenfassung ist gut.)
+- Werbeslogans u.ä.: 0 
+- Designaspekte: 0 
+- Voraussetzung bekannten Wissens: -3
+
+=====================
+=== Feedback Ende ===
+=====================

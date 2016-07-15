@@ -103,3 +103,28 @@ Wertung 2: Projektbeschreibung: gesamt: 2 / 10
 ===================================
 
 Leider keine Änderungen seit letztem Feedback.
+
+===================================
+=== Feedback Alpers, 2016-07-15 ===
+===================================
+
+Gleich vorweg: Sie haben heute zum ersten Mal seit über zwei Monaten am Projekt gearbeitet. Das ist deutlich zu wenig.
+
+Bezüglich dessen, was Sie als Kinderbücher bezeichnen: Solche Bücher laufen  unter dem Begriff "Abenteuer-Spielbuch". Eine der bekanntesten Reihen in diesem Bereich finden Sie z.B. hier als online-Version: https://www.projectaon.org/en/Main/Home
+
+Bezüglich des Kooperationsmodus: Lassen Sie zwei Dinge bitte weg: 1.) Kommunikation per Mikrofon; das ist unnötig: Wir reden hier über eine Webanwendung, also über ein Programm, dass komplette Buchseiten innerhalb von weniger als einer Sekunde rund um die Welt schicken kann.
+
+Außerdem ist die Beschränkung auf zwei Personen sinnlos, denn: Es geht um eine Webanwendung.
+
+Genauso der Satz: "Änderungen werden möglichst in Echtzeit auf beiden Rechnern gezeigt." Nochmal: Wir reden über eine Webanwendung...
+
+Auch der Satz "Danach beginnt die Generierung der erzählerischen Anteile." weist darauf hin, dass Sie noch zu nahe an klassischer Projektarbeit sind: Warum sollen die Nutzer der Software nicht selbständig entscheiden, wann Sie sich um welche Anteile kümmern?
+
+Insgesamt ist Ihre Beschreibung deutlich zu ausführlich: Es soll eine stichpunktartige Aufzählung sein, auf deren Basis die weitere Entwicklung des Programms erfolgt, keine "echte" Inhaltsangabe im Sinne des Deutschunterrichts.
+
+Wertung 2: Projektbeschreibung: gesamt: 4 / 10
+- Pro Interaktionsmöglichkeit: 1
+- Knappe aber klare Beschreibung: 3 (Zu umfangreich; nur schwer als Basis für die weitere Entwicklung nutzbar.)
+- Werbeslogans u.ä.: 0 
+- Designaspekte: 0 
+- Voraussetzung bekannten Wissens: 0

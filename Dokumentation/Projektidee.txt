@@ -1,34 +1,68 @@
-﻿============================================
-=== Projektidee ColePfeiffer, 2016-04-12 ===
-============================================
+=== Projektidee ColePfeiffer, 2016-07-12 ===
 
-#### Projektidee für Projekt 1: Tool zur Erstellung von Nichtspielercharakteren für ein Pen & Paper-System (Midgard)
+____________________________________________________________________________________________________________________________
 
-Kurz und knapp: Ich bin ein großer P&P-Rollenspielfan. Als Spielleiter ist es für fast jedes eigene Abenteuer nötig, sich Nichtspielercharaktere auszudenken, die häufig nur in einem Abenteuer auftauchen und somit den Aufwand der Erstellung kaum rechtfertigen. 
-
-Ich würde gerne ein Tool entwickeln, das sich einerseits um das Auswürfeln der Werte kümmert und andererseits einen interaktiven Charakterhintergrundgenerator darstellen soll. Die Anwendung sollte Optionen zur Anpassung ans jeweilige Abenteuer oder Setting mitbringen. Bereits erstellte Charaktere sollen speicherbar oder importierbar und so eine nachträgliche Bearbeitung ermöglichen. 
-
-Elemente:
-- mehrere, vom Nutzer editierbare Textfelder zur Ausgabe/Anzeige; also so, dass der User nach dem Generieren einfach Änderungen vornehmen kann; Neuberechnung einzelner Elemente per Button oder Markierfunktion
-- Dropdownmenü(s)/Elemente zur Anpassung ans Setting und zur Auswahl von bestimmten Stereotypen oder Kategorien
-- Benutzerkonto und Loginfunktion oder Funktion zum Importieren und Exportieren von Figuren 
-- logische und nachvollziehbare Verknüpfung von beschreibenen Elementen; Unterteilung in verschiedene Pools
-- Nutzer sollen selbst neue Stichworte oder Anpassungsoptionen hinzufügen können (eventuell auch die Möglichkeit neue Spielsysteme zu implementieren); diese Zusätze sollen dann importiert/exportiert werden können, sodass sie teilbar sind
-- eventueller Bilderupload für Charakterbilder
-- erweiterbar ...
-
-//Anmerkung Moritz Stoll
-ggf. wären sinnvoll:
-- Log-In-Maske( eingabe Username, Passowrt und Bestätigung)
-- Tabellen um auswahl aus Kategorien in den Dropdownmenüs darzustellen
-- die Möglichkeit über eine Schaltfläche ein PDF des Charakterbogens zu erzeugen
-- ein Speicherbutton
-- eine Übersicht aller gespeicherten und importierten Charaktere (wenn du dich dafür entscheidest)
-- Schaltflächen (Links) wenn andere Dropdownmenüs oder Ansichten geöffnet werden
-(am Rande: coole Idee!)
+					Projektidee für Projekt 1: Tool zur Erstellung von Nichtspielercharakteren für das Pen & Paper-System Midgard
+____________________________________________________________________________________________________________________________
 
 
-(Anmerkung: Es gibt bereits Charaktergeneratoren im Internet - meistens sind diese aber sehr rudimentär und für mich uninteressant. Fast alle beziehen sich auf verbreitetere Systeme und berechnen lediglich die Würfelwerte, aber können nichts darüber hinaus - sind also sehr limitiert in ihrer Funktion. Freu mich aufs Feedback und auf die Arbeit am Projekt. LG!)
+Kurz und knapp: Ich bin ein großer P&P-Rollenspielfan. Als Spielleiter ist es für fast jedes eigene Abenteuer nötig, sich Nichtspielercharaktere auszudenken, die häufig nur in einem Abenteuer auftauchen und somit den Aufwand der Erstellung kaum rechtfertigen. Die Anwendung soll diesen Prozess schneller- und einfacher machen.
+
+
+Hauptfunktionen der Anwendung
+
+
+	-	Auswürfeln der reinen Werte - angepasst ans jeweilige Spielesystem 
+	-	interaktiver Charakterhintergrundgenerator, der die erzählerischen Aspekte des Charakters abdeckt (z.B. Werdegang, Moral)
+	-	Kooperationsmodus für das Erstellen von Kontakten von Spielfiguren: Spielleiter und Spieler können synchron an Figuren arbeiten.
+	
+	- 	Accountverwaltung und eigene Inhalte
+	
+		-	nach einer Accounterstellung können Charaktere in einer Bibliothek abgespeichert und verwaltet werden
+		-	Nutzer können die Anwendung durch neue Systeme, Settingvorgaben und individuell angepasste Einstellungsoptionen bei der Hintergrundgenerierung erweitern;
+		-	alle öffentlichen, nutzergenerierten Inhalte können von anderen Usern über eine filterbare Suchfunktion eingesehen, bewertet und kommentiert werden; zudem lassen sie sich in die eigene Bibliothek importieren#
+		
+____________________________________________________________________________________________________________________________
+
+					Details
+____________________________________________________________________________________________________________________________
+
+Details zum Ablauf
+
+
+Sowohl bei der Wertegenerierung als auch beim Generieren des Charakterhintergrunds nimmt der Nutzer zunächst Anpassungen vor:
+Er wählt sein Spielsystem, das Setting, sowie die Abenteuerart (z.B. Stadt, Detektivabenteuer) und die Wichtigkeit der Figur (z.B. storyrelvant) oder ihre Funktion (z.B. Zeuge). Darüber hinaus können weitere optionale Anpassungen vorgenommen werden (z.B. Geschlecht oder Name).
+
+Jetzt kann der Nutzer zwischen zwei Erstellungsverfahren wählen:
+
+1. Erst die Werteberechnung, dann die Hintergrundgenerierung
+	- das ist dann sinnvoll, wenn der Nutzer eine Figur erstellen will, die schon im Vorhinein größtenteils feststeht
+	- hier würde das Programm auf die Werte eingehen und basierend auf Stärken und Schwächen Vorschläge machen. 
+
+2. Erst die Hintergrundgenerierung, dann die Werteberechnung
+	- dann sinnvoll, wenn man noch nicht genau weiß in welche Richtung es gehen soll, aber man Werte möchte, die sich nach der Lebensgeschichte der Figur richten 
+	- Hier würden sich Nutzerantworten am Ende auf die Werteberechnung in Form von Würfelmodifikatoren auswirken. (Ich würde hier wohl mit Zählern arbeiten, also z.B. "StärkeCounter++;" oder Ähnliches.)
+	
+Danach schlüpft der Nutzer in die Rolle der Figur und durchlebt einzelne Lebensabschnitte in Form eines textbasierten "Entscheidungsspiels". Die Bezeichnung trifft es nicht ganz und resultiert aus einer Ermanglung eines besseren Wortes, aber das Ganze lässt sich vielleicht mit Kinderbüchern, die in Abhängigkeit von Entscheidungen auf eine bestimmte Seitenzahl verweisen, vergleichen. Nur, dass sich die Anwendung die Entscheidungen des Nutzers merkt und sich während der Generierung daran anpasst. Ich werde wohl hauptsächlich mit Flags und Countern arbeiten, um das zu realisieren.
+
+Je nach Voreinstellungen startet die Hintergrundgenerierung mit unterschiedlichen oder angepassten Fragen- und Antwortstellungen, daher sind diese essentiell. Hier würde ich dann wohl Pools setzen, also je nach System oder Sinn und Zweck der Figur - einfach deswegen, weil sich die Fragen nach eben diesen Punkten richten müssen, um eine gewisse Relevanz hineinzubringen. (...)
+
+____________________________________________________________________________________________________________________________
+
+Zum Kooperationsmodus (webbasiert)
+
+Änderungen werden möglichst in Echtzeit auf beiden Rechnern gezeigt. Über Mikrofon kann miteinander kommunziert werden.
+Spielleiter und Spieler einigen sich auf grobe Rahmenbedingungen, wie Setting usw. Danach beginnt die Generierung der erzählerischen Anteile. Hier entscheidet größtenteils der Spieler über Details, aber je nach Loyalitätsstufe und Kenntnisgrad des Kontakts tauchen ab und zu Fragestellungen auf, die sich ausschließlich an den Spielleiter richten. Dem Spieler bleiben sie verborgen. Auch hier macht die Anwendung Vorschläge, wenn sie einen Trend in eine bestimmte Richtung erkennen kann. 
+
+
+Beispiel: 
+
+Spieler möchte für seine Figur Thorin den Bekannten XY erstellen. Spieler und Spielleiter geben zunächst das Geschlecht, den Namen, das Setting usw. ein und einigen sich auf die Loyalitätsstufe und den Kenntnisgrad seines neuen Kontaktes. Beide Faktoren sind für die verdeckten Fragen relevant. Nun beantwortet der Spieler, ähnlich wie beim Hintergrundgenerator, Fragen zu seinem Charakter. Der Spielleiter verfolgt die Eingaben in Echtzeit. Eine verdeckte Frage könnte z.B. wie folgt aussehen:
+"Welche Geheimnisse hat Bekannter XY vor Thorin?"
+Abhängig von einem Würfelwurf mit einem Modifier je nach Kenntnisgrad wird zunächst ermittelt, ob es ein Geheimnis gibt und wenn ja, wie groß das Geheimnis ist. Anschließend werden Vorschläge gemacht - der Spielleiter kann hier aber auch selbst etwas eintragen. Währenddessen wird dem Spieler angezeigt, dass der Spielleiter eine verdeckte Frage beantwortet - natürlich ohne sie dem Spieler aufzudecken.
+	
+____________________________________________________________________________________________________________________________
+
 
 ===================================
 === Feedback Alpers, 2016-04-12 ===

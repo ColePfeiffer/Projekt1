@@ -1,10 +1,95 @@
+=======================================================================
+=== 	 Nicht-spieler-Charaktergenerator für Pen & Paper-Systeme 	=== 	
+=== 			Projektidee ColePfeiffer, 2016-08-03 		===
+=======================================================================
+
+Ich bin ein großer P&P-Rollenspielfan. Als Spielleiter ist es für fast jedes eigene Abenteuer nötig, sich Nichtspielercharaktere auszudenken, die häufig nur in einem Abenteuer auftauchen und somit den Aufwand der Erstellung kaum rechtfertigen.
+
+Die Anwendung richtet sich in erster Linie an Spielleiter und ist als Generator zu verstehen. Sie soll den Nutzer bei der Erstellung der erzählerischen Anteile unterstützen. Das ist die Kernfunktion der Anwendung. Die Werteberechnung der Attribute soll dynamisch über Würfelmodifikatoren in Form von Zählern erfolgen. 
+
+Darüber hinaus soll es einen Kooperationsmodus geben. Dieser richtet sich an Spieler und Spielleiter. Gemeinsam können Kontakte von der Spielerfigur erstellt oder vertieft werden (Beispiel: Connections aus Shadowrun). Es können aber auch gemeinsam neue Figuren angelegt werden.
+
+Es wird die Möglichkeit einer Account-Erstellung geben. So können Charaktere in eine Bibliothek abgespeichert- und mit anderen geteilt werden. Eine Suchfunktion soll öffentliche Inhalte einsehbar machen – diese können so bewertet, kommentiert und übernommen werden. 
+Nutzer sollen die Anwendung durch neue Systeme und angepasste Einstellungsoptionen erweitern können.
+
+Nutzer und Programm stehen in einem Austausch miteinander. Das Programm geht auf Nutzereingaben ein- und gibt dem Nutzer individualisierte Ausgaben. 
+
+__________________________________________
+Wie stelle ich mir das vor?
+__________________________________________
+
+-	Grundauswahl: Einige wenige Punkte müssen im Vorfeld bestimmt werden. Andere sind optional.
+Beispiel: System/Setting: Mittelalter, Rasse: Zwerg, Funktion: Hauptperson (Questgeber)
+
+-	Fragenpools: Als Fragenpool bezeichne ich eine Gruppierung von Fragen und Antworten. Diese Pools richten sich primär nach der Funktion der Figur. Sie enthalten thematisch-sortierte Fragen/Antworten (z.B. nach Kindheit, Moral, Ziele) mit definierten Abhängigkeiten.
+Beispiel: Eine Hauptfigur (Typ: Antagonist) erhält andere Fragen als eine neutral-gesinnte Nebenfigur. Hier wird z.B. nach dem Motiv gefragt oder Ähnliches. Es werden zudem Fragen oder Antworten, die nicht in das Setting oder zu sonstigen Voreinstellungen passen, herausgenommen. Eine Frage aus dem Bereich Kindheit könnte auf den Geburtsort abzielen.
+
+Wichtig: Hier geht es zunächst nur um den GRUND-Fragenpool. Zu diesem Zeitpunkt wird dieser ziemlich groß sein. Im Verlauf der Generierung geht das Programm auf Nutzereingaben ein und bearbeitet kontinuierlich besagten Pool. Im Endeffekt soll es sich um einen individualisierten Pool handeln, der auf vorherigen und aktuellen Nutzereingaben beruht.
+
+-	Ablauf: Der Nutzer durchläuft jetzt die thematisch-angeordneten Fragen/Antwort-Gruppierungen innerhalb des Grund-Fragenpools. 
+Einige unpassende Fragen sind bereits (aufgrund der Vorauswahl) weggefallen. Die Anwendung merkt sich die Entscheidungen des Nutzers und passt sich während der Generierung an diese an. Zum Teil führt das dazu, dass sich Wege verschließen oder öffnen. Das Programm kann aber auch Vorschläge machen, wenn es merkt, dass eine spätere Auswahl eine frühere revidieren könnte. Es weist den Nutzer auf mögliche Konflikte hin und fordert ihn dazu auf diese näher auszuführen, falls gewollt. (Das soll mit Flags und Countern erreicht werden.)
+
+-	Werteberechnung erfolgt nach der Generierung der erzählerischen Anteile:
+Bei vielen Wahlmöglichkeiten zählen Counter mit. Für den Nutzer ist das nicht einsehbar. Beispiel: Figur stammt vom Land, geht einem körperlichen Beruf nach und treibt viel Sport oder Ähnliches – hier würde der Counter für das Attribut Stärke/Gewandtheit hochzählen und sich am Ende als Modifikator aufs Würfelergebnis auswirken. 
+
+- 	Der Kooperationsmodus ist ähnlich aufgebaut, aber hier können mehrere Personen zeitgleich arbeiten. 
+
+__________________________________________
+Ablauf
+__________________________________________
+
+
+Erste Form – klassisches EVA-Prinzip bei hierarchischen Fragestellungen
+
+E: Nutzer soll eine Auswahl aus verschiedenen Antworten treffen, um eine Frage zu beantworten.
+V: Das Programm generiert basierend auf der Nutzereingabe (für den Nutzer nicht einsehbar) passende weitere Fragen und Auswahlmöglichkeiten. 
+A: Gibt die nächste Frage aus, Nutzer wählt erneut aus, usw.
+
+Zweite Form - Sinnvolle Kombinationen finden auf globaler Ebene
+
+E: wie oben
+V und R (Reaktion): Das Programm muss Kombinationen bilden können, um auf globaler Ebene zu funktionieren – hier kommen die Abhängigkeiten ins Spiel. Hat eine Figur x und y gewählt, dann kann sie nicht mehr z wählen. Hätte sie nur x oder y gewählt, könnte sie z wählen. Das Programm soll möglichst sinnvoll auf Nutzereingaben reagieren. Es streicht also konsequent Fragen oder Antworten aus späteren Kategorien – oder aber wählt besonders passende Fragen und Antworten heraus, die aufgrund der Kombination vorheriger Eingaben besonders interessant scheinen. 
+
+Dritte Form – Konflikte ausfindig machen und Vorschläge machen
+
+E: wie oben
+V und R: Das Programm wertet bisher erfolgte, gespeicherte, Nutzereingaben auch auf bereits abgeschlossene Fragenstellungen an. Das heißt, dass bei entsprechender Eingabe auch im Nachhinein, auf alte Fragen verwiesen wird, falls ein „Konflikt“ auftaucht.
+Beispiel: Die Figur soll besonders tierlieb sein. Später wählt der Nutzer den Beruf Schlachter. Nun verweist das Programm auf die entsprechende Stelle, bietet einen Alternativvorschlag oder fordert den Nutzer dazu auf, den Konflikt näher zu beschreiben.
+
+******************************************************************************
+
+
+
+(Anmerkung: 
+
+Ich habe versucht den Text auf die wesentlichen Elemente herunterzubrechen und hoffe, dass er so überschaubarer ist. Auch habe ich versucht die Interaktionsmöglichkeiten konkreter zu benennen und mehr auf den eigentlichen Ablauf einzugehen.
+
+Ich werde jetzt hier gesondert auf ihr Feedback eingehen, weil ich viele Punkte auf die Sie sich bezogen haben, in der neuen Version gar nicht mehr so detailliert beschreibe oder abgeändert habe und ich nicht möchte, dass es so wirkt, als würde ich nicht auf ihre Kritik eingehen. Ich hoffe, dass das in Ordnung ist.
+
+Vielen Dank für den Link bezüglich der Abenteuerbücher. Ich kannte ähnliche Bücher von früher und wusste gar nicht, dass solche Reihen online existieren, aber finde das sehr spannend. 
+
+Ich war mir zunächst nicht sicher wieso sie die Beschränkung auf zwei Personen für sinnlos halten, aber ich glaube, dass ich sie da zunächst missverstanden hatte. Die entsprechende Beschränkung habe ich entfernt. Jetzt soll es auch möglich sein über den Kooperationsmodus Figuren zu erstellen, die keine Kontakte sind – mit beliebig vielen Leuten gleichzeitig.
+
+Auch der Punkt, dass an einer bestimmten Stelle die Generierung der biographischen Anteile erfolgt und der Nutzer die Reihenfolge nicht selbstbestimmen kann, hat mich zunächst irritiert. Ich glaube, dass mein vorheriger Text an vielen Stellen unverständlich oder irreführend war. Die vorgegebene Reihenfolge ist eigentlich nur programmtechnisch gemeint – das bedeutet, dass das Generieren der Fragenpools abhängig von der Grundauswahl des Nutzers ist. Daher kann erst dann damit begonnen werden, nachdem der Nutzer z.B. Abenteuerart und Setting ausgewählt hat. Ansonsten schränke ich den Nutzer hier nicht ein und die Vorauswahl ist sehr minimiert gehalten.
+
+Ich hoffe wirklich sehr, dass die gegenwärtigen Änderungen in die richtige Richtung gehen und freue mich aufs nächste Feedback.
+
+*
+
+Eine etwas anschaulichere Version des Textes können Sie, wenn Sie mögen, hier einsehen: https://docs.google.com/document/d/1a620CZdZxkBEZM4UboCVd3AAZPHF7xmTcpjtatxIlsA/edit#
+
+===========================================
+
+
+
+
+
+
+
+
+============================================
 === Projektidee ColePfeiffer, 2016-07-12 ===
-
-____________________________________________________________________________________________________________________________
-
-					Projektidee für Projekt 1: Tool zur Erstellung von Nichtspielercharakteren für das Pen & Paper-System Midgard
-____________________________________________________________________________________________________________________________
-
+===========================================
 
 Kurz und knapp: Ich bin ein großer P&P-Rollenspielfan. Als Spielleiter ist es für fast jedes eigene Abenteuer nötig, sich Nichtspielercharaktere auszudenken, die häufig nur in einem Abenteuer auftauchen und somit den Aufwand der Erstellung kaum rechtfertigen. Die Anwendung soll diesen Prozess schneller- und einfacher machen.
 

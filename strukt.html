@@ -1,9 +1,126 @@
 <!-- 
-(
-Vielen Dank - sowohl für das Feedback als auch für die Anmerkungen. :) 
-Wäre Ihrer Meinung nach ein Benutzerkonto oder eine Importierfunktion sinnvoller? Oder beides?
-)
+===================================
+=== ColePfeiffer, 2016-08-12 ===
+===================================
+						________________________________________
+							Strukturelle Elemente
+						________________________________________
+						
+							=============================						
+							    Zweiter Aufgabenblock
+							=============================
+							
+Anmerkung: Habe die strukturellen Elemente der Übersicht wegen in grobe Kategorien (01-03) einsortiert - das soll aber noch keine Gruppierung darstellen.
+						
+01 - Startseite
 
+	Textfeld: NCS-Generator 		(statisch, Beschriftung)
+
+	Textfeld: Kleine Beschreibung 		(ein/aufklappbar)
+	
+	Wenn nicht eingeloggt...
+		Textfeld: Neuer Account		(öffnet Anmeldemaske)
+		Textfeld: Einloggen 		(öffnet Anmeldemaske)
+	
+	Wenn eigenloggt...
+		Textlink: Neue Figur 		
+		Textlink: Kooperationsmodus 
+		Textlink: Bibliothek 		
+		Textlink: Figurensuche 		
+		Textlink: Ausloggen
+
+_____________________________________________________________________________________		
+02a - Neue Figur	
+
+	Textfeld: Grundeigenschaften		(statisch, Beschriftung)
+	Button: Hilfe				(ein/aufklappbar)
+		
+		Textfeld: System/Setting
+			Korrespondierendes Dropdownmenü
+		
+		Textfeld: Funktion
+			Korrespondierendes Dropdownmenü (Hauptfigur, Nebenfigur, ...)
+			Korrespondierendes Dropdownmenü (Questgeber, Antagonist, ...)
+				
+	Absatz 
+	__________________
+		
+	Textfeld: Vorauswahl - optional		(statisch, Beschriftung)
+
+		Textfeld: Rasse (nur, wenn entsprechendes Setting gewählt wurde)
+				Korrespondierendes Dropdownmenü 	
+		
+		Textfeld: Geschlecht
+				Korrespondierendes Dropdownmenü 
+
+		Ggf. weitere Textfelder ähnlicher Natur; die Anzahl ist abhängig von der späteren Ausführung
+		
+	Absatz
+	__________________
+	
+	Button: individuelle Generierung
+	Button: zufällige Generierung
+	
+	Dropdownmenü: Ein/Aufklapp-Einstellungen
+		z.B. (nur Oberkategorien aufklappen, Fragen einklappen), (alles ein/ausklappen) oder (nur unbeantwortete Fragen ausklappen)
+	
+	Absatz
+	__________________	
+	
+	Textfeld: Oberkategorie				(ein/ausklappbar, für jede Kategorie notwendig)
+	Button: Sperren des Abschnitts 		(dieser Abschnitt wird bei einer Neugenerierung nicht neuberechnet, unter jeder Oberkategorie)
+			Textfeld: Frage						(ein/ausklappbar, für jede Frage notwendig)
+				Schaltfläche/Textfeld: Antwort 		(anklickbar, für jede Antwort notwendig)
+				
+	Absatz
+	__________________	
+	
+	Button: Bestätigen und zum nächsten Abschnitt
+	
+	
+	// Anmerkung:	Bei Konflikt/Vorschlag werden entsprechende Felder farblich hinterlegt dargestellt.
+_____________________________________________________________________________________	
+
+02b - Werteberechnung
+
+	Textfeld: Regelwerkteil			(statisch, Beschriftung)
+	
+		Textfeld: Werte
+			Button: Generieren
+			Tabelle: Zwei Zeilen, Anzahl der Spalten abhängig von der Anzahl der Werte je Spielsystem
+		 
+		Textfeld und Eingabefeld: Fähigkeiten
+		
+	Button: zum nächsten Abschnitt
+			
+_____________________________________________________________________________________		
+02c - Abschluss
+
+	Textfeld: Übersicht
+	
+	
+	
+	Textfeld und Eingabefeld: Eigene Anmerkungen
+	
+	
+	Textfeld und Eingabefeld: Name zum Abspeichern
+	Button: Speichern
+	
+_____________________________________________________________________________________	
+	
+	
+03 - Bibliothek
+
+	Dropdownmenü: Sortiereinstellungen
+	Button: Neusortieren
+
+	Tabelle: Gespeicherte Figuren mit 6 Spalten: Speichername, Name der Figur, System, Erstellungsdatum, Letzte Änderung, Notiz; Zeilenanzahl abhängig von gespeicherten Figuren)
+
+_____________________________________________________________________________________	
+	
+						===================================
+						===         ALTE VERSION	===
+						===================================
 						___________________________________
 							Unterteilung der Anwendung
 						___________________________________
@@ -95,6 +212,11 @@ ________________________________________________________________________________
 	
 _____________________________________________________________________________________
 -->
+
+
+
+
+
 
 <!--
 === Feedback Alpers, 2016-05-04 ===

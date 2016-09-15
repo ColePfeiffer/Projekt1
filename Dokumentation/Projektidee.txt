@@ -1,7 +1,15 @@
 =======================================================================
 === 	 Nicht-spieler-Charaktergenerator für Pen & Paper-Systeme 	=== 	
-=== 			Projektidee ColePfeiffer, 2016-08-03 		===
+=== 			Projektidee ColePfeiffer, 2016-09-15 		===
 =======================================================================
+
+Änderungen am Spreadsheet: https://docs.google.com/spreadsheets/d/1cuqL1gfQCAzdlc3QMM2kMz-1ESQbYGHfs5jEqbDLmaU/edit?usp=sharing
+
+
+
+Anschaulichere Version (reiner Text): https://docs.google.com/document/d/1a620CZdZxkBEZM4UboCVd3AAZPHF7xmTcpjtatxIlsA/edit#
+
+-------------
 
 Ich bin ein großer P&P-Rollenspielfan. Als Spielleiter ist es für fast jedes eigene Abenteuer nötig, sich Nichtspielercharaktere auszudenken, die häufig nur in einem Abenteuer auftauchen und somit den Aufwand der Erstellung kaum rechtfertigen.
 

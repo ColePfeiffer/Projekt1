@@ -1,10 +1,12 @@
 =======================================================================
 === 	 Nicht-spieler-Charaktergenerator für Pen & Paper-Systeme 	=== 	
-=== 			Projektidee ColePfeiffer, 2016-09-15 		===
+=== 			Projektidee ColePfeiffer, 2016-09-27 		===
 =======================================================================
 
 Änderungen am Spreadsheet: https://docs.google.com/spreadsheets/d/1cuqL1gfQCAzdlc3QMM2kMz-1ESQbYGHfs5jEqbDLmaU/edit?usp=sharing
 Kommentarfunktion ist aktiviert.
+
+-> Filter und Tagliste, Fragengruppen nach Kategorien und Gedanken über den Generierungsprozess ergänzt
 
 
 Anschaulichere Version (reiner Text): https://docs.google.com/document/d/1a620CZdZxkBEZM4UboCVd3AAZPHF7xmTcpjtatxIlsA/edit#

@@ -66,7 +66,8 @@ Da sie aber im Kern gleich sind, habe ich sie nur einmal aufgezählt. Ist das so
 							(1.1) Gruppen bilden
 						________________________________________
 
-I. Registrieren
+	I. Registrieren
+
 
 10 - form 
 15 - label 					/ Username
@@ -87,7 +88,8 @@ I. Registrieren
 09 - submit	
 
 
-II. Login-Maske
+	II. Login-Maske
+
 
 10 - form 
 15 - label 					/ Username
@@ -98,7 +100,9 @@ II. Login-Maske
 
 09 - submit	
 
-III. Navigationsleiste
+
+	III. Navigationsleiste
+
 
 22 - nav
 23 - ul
@@ -107,36 +111,56 @@ III. Navigationsleiste
 	04 - Link/Anker				/ Kooperationsmodus
 	04 - Link/Anker 			/ Bibliothek
 	04 - Link/Anker 			/ Figurensuche
-	04 - Link/Anker 			/ Ausloggen
-	
-IV. Ausklappbarer Text
+	04 - Link/Anker 			/ Ein/Ausloggen
+	04 - Link/Anker 			/ Mein Account
+
+
+	IV. Ausklappbarer Text
+
 
 03a - details 					/ Text, der aufklappbar ist
 03b - summary 					/ "Hilfe" / "Mehr" o.Ä.
 
-V. Drop-Down-Gruppe ohne Unterkategorien
+
+	V.Drop-Down-Gruppe ohne Unterkategorien
+
 
 10 - form 
 15 - label 					/ Titel der Drop-Down-Liste
 11 - select 				/ ID-Verknpüfung mit Label
 13 - option					/ Jeweilige Einträge
+(09 - submit				/ zum Absenden, falls nicht in größeres Formular integriert)
 
-VI. Drop-Down-Gruppe mit Unterkategorien
+
+	VI. Drop-Down-Gruppe mit Unterkategorien
+
 
 10 - form 
 15 - label 					/ Titel der Drop-Down-Liste
 11 - select 				/ ID-Verknpüfung mit Label
 12 - optgroup 				/ Jeweilige Überschrift
 13 - option					/ Jeweilige Einträge
+(09 - submit				/ zum Absenden, falls nicht in größeres Formular integriert)
 
-VII. Einfach-Auswahl
+	VII. Datalist
+
+15 - label 					/ Titel
+14 - datalist
+13 - option					/ Je Eintrag
+(09 - submit				/ zum Absenden, falls nicht in größeres Formular integriert)
+
+	VIII. Einfach-Auswahl
+
 
 10 - form 
 15 - label 		
 16 - input type=radio
 ...
+(09 - submit				/ zum Absenden, falls nicht in größeres Formular integriert)
 
-VIII. Frage / Antwort
+
+	IX. Frage / Antwort-Block
+
 
 10 - form
 05 - p 						/ Frage
@@ -145,16 +169,116 @@ VIII. Frage / Antwort
 	16 - input type=radio	/ Antwort 1
 	16 - input type=radio	/ Antwort 2
 	...						/ Antwort n
+(09 - submit				/ zum Absenden, falls nicht in größeres Formular integriert)
 
 						________________________________________
 							(1.2) Ansichten bilden
 						________________________________________
 
-------------------
---- view_index ---
-------------------
+	------------------------------------
+	--- view_index ---
+	------------------------------------
 
-...
+
+02 - h1 					/ Rollenspiel Nichtspielerfiguren Generator
+27 - article				/ Kurze Beschreibung
+05 - p
+
+III. Navigationsleiste
+I. Registrieren
+II. Login Maske
+
+
+	------------------------------------
+	--- view_newCharacter0 ---
+	------------------------------------
+
+02 - h1 									/ Neue Figur
+05 - p
+IV. Ausklappbarer Text 						/ "Anleitung"
+VI. Drop-Down-Gruppe mit Unterkategorien 	/ System/Setting, required - Unterteilung in Sci-Fi, Medieval, ... 
+
+V. Drop-Down-Gruppe ohne Unterkategorien	/ Funktion/Rolle, required (Hauptfigur, Nebenfigur, ...)
+V. Drop-Down-Gruppe ohne Unterkategorien	/ Typ, required (Questgeber, Antagonist, ...)
+V. Drop-Down-Gruppe ohne Unterkategorien	/ Rasse, required
+
+VIII. Einfach-Auswahl						/ Geschlecht
+VIII. Einfach-Auswahl						/ Berufkategorie (Körperlich, Mental, ...)
+VII. Datalist								/ Berufsbezeichnung (Auswahl oder Eigenangabe)
+
+09 - submit
+20 - input type=reset						/ Resetbutton		
+
+III. Navigationsleiste
+I. Registrieren
+II. Login Maske
+
+	------------------------------------
+	--- view_newCharacterQuestions ---
+	------------------------------------
+
+19 - input type=button						/ OnClick-Funktion: Zufällige Generierung
+19 - input type=button						/ OnClick-Funktion: Individuelle Generierung
+
+IX. Frage / Antwort-Block
+
+19 - input type=button						/ OnClick-Funktion: Zwischenspeicherung
+
+III. Navigationsleiste
+I. Registrieren
+II. Login Maske
+
+
+	------------------------------------
+	--- view_pointCalc ---
+	------------------------------------
+
+02 - h1 							/ Werteberechnung
+05 - p			
+
+25 - table	
+19 - input type=button				/ OnClick-Funktion: Neuberechnung
+19 - input type=button				/ OnClick-Funktion: Eigene Werte
+
+18 - textarea						/ Fähigkeiten
+09 - submit		
+
+III. Navigationsleiste
+I. Registrieren
+II. Login Maske
+
+	------------------------------------
+	--- view_Overview ---
+	------------------------------------
+
+02 - h1 							/ Übersicht
+05 - p
+
+ggf. 26 - object data
+
+06 - input type=text 				/ Charaktername
+18 - textarea						/ Eigene Anmerkungen
+09 - submit							
+
+III. Navigationsleiste
+I. Registrieren
+II. Login Maske
+
+
+	------------------------------------
+	--- view_Library ---
+	------------------------------------
+
+02 - h1 					/ Meine Bibliothek
+05 - p
+
+// Kommentar: http://www.kryogenix.org/code/browser/sorttable/
+26 - table 					/ Tabellengrundgerüst 2: Zeilenanzahl abhängig von Anzahl der Figuren
+							6 Spalten: Speichername, Name, System, Erstellungszeitpunkt, Letzte Änderung, Notiz
+
+III. Navigationsleiste
+I. Registrieren
+II. Login Maske
 
 
 <!--

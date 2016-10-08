@@ -1,221 +1,88 @@
 <!-- 
-===================================
-=== ColePfeiffer, 2016-08-12 ===
-===================================
+						=======================================
+						   === ColePfeiffer, 2016-10-08 ===
+						=======================================
+
+Anmerkung: Hallo, Herr Alpers. Ich habe die Strukt-Datei aufgeräumt und nicht mehr aktuelle Bearbeitungsstände herauseditiert, da sie 
+durch die Commits einsehbar sein sollten. So ist es übersichtlicher. Ich hoffe, dass das in Ihrem Sinne ist. Wenn dem nicht so ist,
+werde ich die Zwischenstände wieder einfügen. 
+
+Hier finden Sie sonst auch die älteren Versionen: https://docs.google.com/document/d/1dqx9qhR_hAjKhB6XC18EJw93egZMuivSecwfcfWgD20/edit?usp=sharing
+
+Fast alle strukurellen Elemente, die ich hier aufzähle, werden in meiner Webanwendung mehrfach genutzt. 
+Da sie aber im Kern gleich sind, habe ich sie nur einmal aufgezählt. Ist das so korrekt?
+
 						________________________________________
-							Strukturelle Elemente
+							Strukturierung von Ansichten
 						________________________________________
-						
-							=============================						
-							    Zweiter Aufgabenblock
-							=============================
-							
-Anmerkung: Habe die strukturellen Elemente der Übersicht wegen in grobe Kategorien (01-03) einsortiert - das soll aber noch keine Gruppierung darstellen.
-						
-01 - Startseite
 
-	Textfeld: NCS-Generator 		(statisch, Beschriftung)
+01 - header
+02 - h1 					/ für Überschriften
 
-	Textfeld: Kleine Beschreibung 		(ein/aufklappbar)
-	
-	Wenn nicht eingeloggt...
-		Textfeld: Neuer Account		(öffnet Anmeldemaske)
-		Textfeld: Einloggen 		(öffnet Anmeldemaske)
-	
-	Wenn eingeloggt...
-		Textlink: Neue Figur 		
-		Textlink: Kooperationsmodus 
-		Textlink: Bibliothek 		
-		Textlink: Figurensuche 		
-		Textlink: Ausloggen
+03a - details 				/ Für ein/ausklappbare Informationen oder Beschreibungen
+03b - summary 				/ =
 
-_____________________________________________________________________________________		
-02a - Neue Figur	
+04 - Link/Anker 			/ für Verlinkungen
 
-	Textfeld: Grundeigenschaften		(statisch, Beschriftung)
-	Button: Hilfe				(ein/aufklappbar)
-		
-		Textfeld: System/Setting
-			Korrespondierendes Dropdownmenü
-		
-		Textfeld: Funktion
-			Korrespondierendes Dropdownmenü (Hauptfigur, Nebenfigur, ...)
-			Korrespondierendes Dropdownmenü (Questgeber, Antagonist, ...)
-				
-	Absatz 
-	__________________
-		
-	Textfeld: Vorauswahl - optional		(statisch, Beschriftung)
+05 - p 						/ Absatz
 
-		Textfeld: Rasse (nur, wenn entsprechendes Setting gewählt wurde)
-				Korrespondierendes Dropdownmenü 	
-		
-		Textfeld: Geschlecht
-				Korrespondierendes Dropdownmenü 
+06 - input type=text 		/ Für die Anmeldemaske oder kurze Texteingaben
+07 - input type=password 	/ Für die Anmeldemaske
+08 - input type=email 		/ für die Anmeldemaske
+09 - submit					/ zum Absenden
 
-		Ggf. weitere Textfelder ähnlicher Natur; die Anzahl ist abhängig von der späteren Ausführung der Fragenpools
-		
-	Absatz
-	__________________
-	
-	Button: individuelle Generierung
-	Button: zufällige Generierung
-	
-	Dropdownmenü: Ein/Aufklapp-Einstellungen
-		z.B. (nur Oberkategorien aufklappen, Fragen einklappen), (alles ein/ausklappen) oder (nur unbeantwortete Fragen ausklappen)
-	
-	Absatz
-	__________________	
-	
-	Textfeld: Oberkategorie				(ein/ausklappbar, für jede Kategorie notwendig)
-	Button: Sperren des Abschnitts 		(dieser Abschnitt wird bei einer Neugenerierung nicht neuberechnet, unter jeder Oberkategorie)
-			Textfeld: Frage						(ein/ausklappbar, für jede Frage notwendig)
-				Schaltfläche/Textfeld: Antwort 		(anklickbar, für jede Antwort notwendig)
-				
-	Absatz
-	__________________	
-	
-	Button: Bestätigen und zum nächsten Abschnitt
-	
-	
-	// Anmerkung:	Bei Konflikt/Vorschlag werden entsprechende Felder farblich hinterlegt dargestellt.
-_____________________________________________________________________________________	
+10 - form 					/ Grundbaustein für Formulare
 
-02b - Werteberechnung
+11 - select 				/ Drop-Down-Liste
+12 - optgroup 				/ Drop-Down Überschriften
+13 - option					/ Einträge
 
-	Textfeld: Regelwerkteil			(statisch, Beschriftung)
-	
-		Textfeld: Werte
-			Button: Generieren
-			Tabelle: Zwei Zeilen, Anzahl der Spalten abhängig von der Anzahl der Werte je Spielsystem
-		 
-		Textfeld und Eingabefeld: Fähigkeiten
-		
-	Button: zum nächsten Abschnitt
-			
-_____________________________________________________________________________________		
-02c - Abschluss
+14 - datalist 				/ Wird eine ähnliche Verwendung wie die Drop-Down-Liste finden, allerdings kann der User hier Einträge ergänzen
 
-	Textfeld: Übersicht
-	
-	
-	
-	Textfeld und Eingabefeld: Eigene Anmerkungen
-	
-	
-	Textfeld und Eingabefeld: Name zum Abspeichern
-	Button: Speichern
-	
-_____________________________________________________________________________________	
-	
-	
-03 - Bibliothek
+15 - label 					/ Bezeichnungen
+16 - input type=radio		/ Einfachauswahl
+17 - input type=checkbox	/ Mehrfachauswahl
+18 - textarea				/ Für umfangreichere Texteingaben / Nutzererstellte Beschreibungen
 
-	Dropdownmenü: Sortiereinstellungen
-	Button: Neusortieren
+19 - input type=button		/ mit OnClick-Funktion
+20 - input type=reset		/ Resetbutton
 
-	Tabelle: Gespeicherte Figuren mit 6 Spalten: Speichername, Name der Figur, System, Erstellungsdatum, Letzte Änderung, Notiz; Zeilenanzahl abhängig von gespeicherten Figuren)
+21 - fieldset 				/ Für Gruppierungen von Formularen
 
-_____________________________________________________________________________________	
-	
-						===================================
-						===         ALTE VERSION	===
-						===================================
-						___________________________________
-							Unterteilung der Anwendung
-						___________________________________
+22 - nav 					/ Für die Navigation
+23 - ul						/ Für unsortierte Listenansichten
+24 - li						/ Listenpunkte
 
-1. Teil (Optionen und Grundauswahl)
-2. Teil (Ausgabe des generierten Texts, Möglichkeit der Edtierbarkeit usw, ...)
-3. Teil (Erweiterung der Anwendung durch den Anwender)
-4. Teil (Übersicht aller gespeicherten und importierten Charaktere) //Anmerkung Moritz Stoll
+25 - table					/ Tabellengrundgerüst 1: 2 Zeilen, Anzahl der Spalten abhängig vom Regelsystem
+26 - table 					/ Tabellengrundgerüst 2: Zeilenanzahl abhängig von Anzahl der Figuren
+							6 Spalten: Speichername, Name, System, Erstellungszeitpunkt, Letzte Änderung, Notiz
 
+26 - object data			/ für PDF-Darstellungen
+27 - article				/ für längere Textpassagen, die angezeigt werden sollen
+28 - footer		
 
-						___________________________________
-							Strukturelle Elemente
-						___________________________________
+Für später:
 
-_____________________________________________________________________________________
-* Grundlegende Elemente, die in allen Teilen auftauchen werden
+						________________________________________
+							(1.1) Gruppen bilden
+						________________________________________
 
-	- diverse Absätze
-	- Beschriftungselemente der Oberkategorien und der einzelnen Teile
-	- Schaltflächen zum Aufrufen neuer Bereiche (Links, Anker) //Anmerkung Moritz Stoll
-_____________________________________________________________________________________
-	Für jede Unterkategorie:
+I.
+II.
+III.
+IV.
+V.
+...
 
-		- Beschriftungselement (statisch, soll einfach nur das darunterliegende Feld beschreiben)
-		- vom Nutzer editierbares Textfeld zur Ausgabe und gleichzeitigen Anzeige des generierten Inhalts
-		- Schaltfläche (ggf. Button o.Ä.) zur Neugenerierung des Abschnitts
-		- Schaltfläche (ggf. Button o.Ä.) zum Sperren des Abschnitts (dieser Abschnitt wird bei einer kompletten Neugenerierung nicht neuberechnet)
-		
-		//Anmerkungen Moritz Stoll
-		-Tabellen (Darstellung von vielen verschiedenen Auswahlmöglichkeiten,
-		wie z.B. die unterschiedlichen P&P Systeme, Stereotypen)
+						________________________________________
+							(1.2) Ansichten bilden
+						________________________________________
 
-		
-_____________________________________________________________________________________
-_____________________________________________________________________________________
-	
-* Nur für Teil 1:
+------------------
+--- view_index ---
+------------------
 
-	- vielfache Dropdownmenü(s)/Elemente zur Anpassung ans Setting und zur Auswahl von bestimmten Stereotypen oder Kategorien
-	- Benutzerkonto und Loginfunktion oder Funktion zum Importieren und Exportieren von Figuren oder Einstellungen
-	- Button zum Generieren aller Werte mit Berücksichtung der ausgewählten Einstellungen
-	
-	//Anmerkung Moritz Stoll
-	- Loginmaske
-		- Textfeld: Eingabe Username
-		- Textfeld: Eingabe Passwort
-		- Schaltfläche: Bestätigung und Login
-_____________________________________________________________________________________	
-	//Anmerkung Moritz Stoll
-*Nur für Teil 2
-	- Button zum Speichern des Charakters (siehe Anmerkung weiter unten)
-	- Button um fertigen Charakter als Charakterbogen im PDF-Format auszugeben
-	- Button um Anhand der Einstellungen und Werte einen Charaktercode zu generieren 
-
-_____________________________________________________________________________________
-
-
-* Nur für Teil 3: 
-	- Erweitern von Texten usw:
-	- Zwei untereinanderliegende Dropdownmenüs, die miteinander verknüpft sind; eines soll die Oberkategorie, eines die Unterkategorie darstellen;
-	- Textfeld (hier gibt der Nutzer seine Erweiterungen ein)
-	- Beispielausgabefeld mit Schaltfläche (Button) zur Ausgabe seines Textes (hier kann der Nutzer überprüfen wie sein Text nach dem Genererien dargestellt werden würde)
-	- Export und Import-Funktion oder Speicherfunktion, falls ich mich für ein Benutzerkonto entscheide
-	
-	//Anmerkung Moritz Stoll
-	- Button zum importieren eines Charakters
-		- öffnet Textfeld in das ein Charaktercode eingegeben werden muss um einen Charakter zu importieren
-	...
-_____________________________________________________________________________________
-//Anmerkung Moritz Stoll
-* Nur für Teil 4:
-	- Charakterübersicht (eine Tabelle mit Schaltflächen, in der alle bisher gespeicherten und importierten Charaktere dargstellt werden und ausgewählt werden können. Die würden bei Auswahl dann wie in Teil 2 angezeigt werden und wären ebenso editierbar.)	
-
-_____________________________________________________________________________________
-_____________________________________________________________________________________
-//Anmerkung Simon Ruisinger 
-Keine Anmerkungen zum Aufbau. Evtl. erweiterung durch einbindung einer Community.
-*Nur für Teil 3 
-	- Menü um die erstellten Charaktere anderer User zu sehen/importieren. (User generatet Content - Datenbank)
-		-Dropdownmenü 
-			- Auswahl der Spielsysteme 
-			- Katergorien 
-		- Bewertungsfunktion durch andere User 
-_____________________________________________________________________________________
-_____________________________________________________________________________________
-		
-//Anmerkung BlackWolf63
-	Keine Weiteren Verbesserungsverschläge
-	
-_____________________________________________________________________________________
--->
-
-
-
-
+...
 
 
 <!--

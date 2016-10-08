@@ -1,4 +1,6 @@
-<!-- 
+<!-- https://github.com/ColePfeiffer/Projekt1-PaPNSCT/blob/master/strukt.html?ts=4
+
+
 						=======================================
 						   === ColePfeiffer, 2016-10-08 ===
 						=======================================
@@ -59,20 +61,90 @@ Da sie aber im Kern gleich sind, habe ich sie nur einmal aufgezählt. Ist das so
 
 26 - object data			/ für PDF-Darstellungen
 27 - article				/ für längere Textpassagen, die angezeigt werden sollen
-28 - footer		
-
-Für später:
-
+28 - footer	
 						________________________________________
 							(1.1) Gruppen bilden
 						________________________________________
 
-I.
-II.
-III.
-IV.
-V.
+I. Registrieren
+
+10 - form 
+15 - label 					/ Username
+06 - input type=text 		
+
+15 - label 					/ Passwort
+07 - input type=password 	
+
+15 - label 					/ Zweite Passwort-Eingabe zur Überprüfung
+07 - input type=password 
+
+15 - label 					/ E-mail
+08 - input type=email		/
+
+15 - label 					/ Zweite E-mail-Eingabe zur Überprüfung
+08 - input type=email		
+				
+09 - submit	
+
+
+II. Login-Maske
+
+10 - form 
+15 - label 					/ Username
+06 - input type=text 		
+
+15 - label 					/ Passwort
+07 - input type=password 
+
+09 - submit	
+
+III. Navigationsleiste
+
+22 - nav
+23 - ul
+24 - li
+	04 - Link/Anker 			/ Neue Figur
+	04 - Link/Anker				/ Kooperationsmodus
+	04 - Link/Anker 			/ Bibliothek
+	04 - Link/Anker 			/ Figurensuche
+	04 - Link/Anker 			/ Ausloggen
+	
+IV. Ausklappbarer Text
+
+03a - details 					/ Text, der aufklappbar ist
+03b - summary 					/ "Hilfe" / "Mehr" o.Ä.
+
+V. Drop-Down-Gruppe ohne Unterkategorien
+
+10 - form 
+15 - label 					/ Titel der Drop-Down-Liste
+11 - select 				/ ID-Verknpüfung mit Label
+13 - option					/ Jeweilige Einträge
+
+VI. Drop-Down-Gruppe mit Unterkategorien
+
+10 - form 
+15 - label 					/ Titel der Drop-Down-Liste
+11 - select 				/ ID-Verknpüfung mit Label
+12 - optgroup 				/ Jeweilige Überschrift
+13 - option					/ Jeweilige Einträge
+
+VII. Einfach-Auswahl
+
+10 - form 
+15 - label 		
+16 - input type=radio
 ...
+
+VIII. Frage / Antwort
+
+10 - form
+05 - p 						/ Frage
+23 - ul
+24 - li
+	16 - input type=radio	/ Antwort 1
+	16 - input type=radio	/ Antwort 2
+	...						/ Antwort n
 
 						________________________________________
 							(1.2) Ansichten bilden

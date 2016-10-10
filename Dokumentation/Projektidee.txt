@@ -1,163 +1,153 @@
 =======================================================================
 === 	 Nicht-spieler-Charaktergenerator für Pen & Paper-Systeme 	=== 	
-=== 			Projektidee ColePfeiffer, 2016-09-27 		===
+=== 			Projektidee ColePfeiffer, 2016-10-10 		===
 =======================================================================
 
-Änderungen am Spreadsheet: https://docs.google.com/spreadsheets/d/1cuqL1gfQCAzdlc3QMM2kMz-1ESQbYGHfs5jEqbDLmaU/edit?usp=sharing
-Kommentarfunktion ist aktiviert.
+Spreadsheet: 
+https://docs.google.com/spreadsheets/d/1cuqL1gfQCAzdlc3QMM2kMz-1ESQbYGHfs5jEqbDLmaU/edit?usp=sharing
 
--> Filter und Tagliste, Fragengruppen nach Kategorien und Gedanken über den Generierungsprozess ergänzt
-
-
-Anschaulichere Version (reiner Text): https://docs.google.com/document/d/1a620CZdZxkBEZM4UboCVd3AAZPHF7xmTcpjtatxIlsA/edit#
+Letzte Änderung am Spreadsheet: 
+Filter und Tagliste, Fragengruppen nach Kategorien und Gedanken über den Generierungsprozess ergänzt
 
 -------------
 
-Ich bin ein großer P&P-Rollenspielfan. Als Spielleiter ist es für fast jedes eigene Abenteuer nötig, sich Nichtspielercharaktere auszudenken, die häufig nur in einem Abenteuer auftauchen und somit den Aufwand der Erstellung kaum rechtfertigen.
+Anschaulichere Version der Beschreibung (bitte hier lesen und nicht in der Textdatei aufgrund der Formartierung): https://docs.google.com/document/d/1a620CZdZxkBEZM4UboCVd3AAZPHF7xmTcpjtatxIlsA/edit#
 
-Die Anwendung richtet sich in erster Linie an Spielleiter und ist als Generator zu verstehen. Sie soll den Nutzer bei der Erstellung der erzählerischen Anteile unterstützen. Das ist die Kernfunktion der Anwendung. Die Werteberechnung der Attribute soll dynamisch über Würfelmodifikatoren in Form von Zählern erfolgen. 
+-------------
 
-Darüber hinaus soll es einen Kooperationsmodus geben. Dieser richtet sich an Spieler und Spielleiter. Gemeinsam können Kontakte von der Spielerfigur erstellt oder vertieft werden (Beispiel: Connections aus Shadowrun). Es können aber auch gemeinsam neue Figuren angelegt werden.
+NSC-Generator 
+für Pen & Paper-Systeme  
 
-Es wird die Möglichkeit einer Account-Erstellung geben. So können Charaktere in eine Bibliothek abgespeichert- und mit anderen geteilt werden. Eine Suchfunktion soll öffentliche Inhalte einsehbar machen – diese können so bewertet, kommentiert und übernommen werden. 
-Nutzer sollen die Anwendung durch neue Systeme und angepasste Einstellungsoptionen erweitern können.
+Kurzbeschreibung
+Warum ein NSC-Generator?
 
-Nutzer und Programm stehen in einem Austausch miteinander. Das Programm geht auf Nutzereingaben ein- und gibt dem Nutzer individualisierte Ausgaben. 
+Ich bin ein großer P&P-Rollenspielfan. Als Spielleiter ist es für fast jedes eigene Abenteuer nötig, sich Nichtspielercharaktere auszudenken. Diese spielen häufig nur in einem Abenteuer mit, aber die Erstellung ist stets mit einem hohen Zeitaufwand verbunden.
+Was macht die Anwendung?
+ 
+Die Anwendung richtet sich in erster Linie an Spielleiter von Rollenspielsystemen und ist als Generator zu verstehen. Sie soll dem Nutzer bei der Erstellung der erzählerischen Anteile helfen und den kreativen Prozess durch zur Figur passende Vorschläge und Fragestellungen vereinfachen. 
 
-__________________________________________
-Wie stelle ich mir das vor?
-__________________________________________
+Das bedeutet
 
--	Grundauswahl: Einige wenige Punkte müssen im Vorfeld bestimmt werden. Andere sind optional.
-Beispiel: System/Setting: Mittelalter, Rasse: Zwerg, Funktion: Hauptperson (Questgeber)
+Nutzer und Anwendung stehen in einem Austausch miteinander
+die Anwendung geht auf Nutzereingaben ein- und gibt dem Nutzer individualisierte Ausgaben
+die Werteberechnung der Attribute erfolgt am Ende dynamisch anhand der Antworten über Würfelmodifikatoren (siehe Werteberechnung)
+Wie macht die Anwendung das?
 
--	Fragenpools: Als Fragenpool bezeichne ich eine Gruppierung von Fragen und Antworten. Diese Pools richten sich primär nach der Funktion der Figur. Sie enthalten thematisch-sortierte Fragen/Antworten (z.B. nach Kindheit, Moral, Ziele) mit definierten Abhängigkeiten.
-Beispiel: Eine Hauptfigur (Typ: Antagonist) erhält andere Fragen als eine neutral-gesinnte Nebenfigur. Hier wird z.B. nach dem Motiv gefragt oder Ähnliches. Es werden zudem Fragen oder Antworten, die nicht in das Setting oder zu sonstigen Voreinstellungen passen, herausgenommen. Eine Frage aus dem Bereich Kindheit könnte auf den Geburtsort abzielen.
+Die Anwendung arbeitet mit Fragenpools, das sind:
+Gruppierungen von Fragen und Antworten
+in Kategorien unterteilt (Kindheit, Moral, Ziele) und thematisch sortiert 
+stehen stets in abhängig zueinander
+Im Detail
+Ablauf des Generierungsprozess
 
-Wichtig: Hier geht es zunächst nur um den GRUND-Fragenpool. Zu diesem Zeitpunkt wird dieser ziemlich groß sein. Im Verlauf der Generierung geht das Programm auf Nutzereingaben ein und bearbeitet kontinuierlich besagten Pool. Im Endeffekt soll es sich um einen individualisierten Pool handeln, der auf vorherigen und aktuellen Nutzereingaben beruht.
+Festlegung des Grundfragenpools
 
--	Ablauf: Der Nutzer durchläuft jetzt die thematisch-angeordneten Fragen/Antwort-Gruppierungen innerhalb des Grund-Fragenpools. 
-Einige unpassende Fragen sind bereits (aufgrund der Vorauswahl) weggefallen. Die Anwendung merkt sich die Entscheidungen des Nutzers und passt sich während der Generierung an diese an. Zum Teil führt das dazu, dass sich Wege verschließen oder öffnen. Das Programm kann aber auch Vorschläge machen, wenn es merkt, dass eine spätere Auswahl eine frühere revidieren könnte. Es weist den Nutzer auf mögliche Konflikte hin und fordert ihn dazu auf diese näher auszuführen, falls gewollt. (Das soll mit Flags und Countern erreicht werden.)
+Nutzer füllt Pflichtfelder aus
+diese Angaben und die Funktion der Figur bestimmen den Grundfragenpool und die Anzahl der Fragen
+optionale Felder führen zu einem kleineren, aber spezialisierten Pool
+Beispiel: System/Setting (notwendig), Funktion und Typ (notwendig), Rasse (optional), usw … (siehe Tabellen)
 
--	Werteberechnung erfolgt nach der Generierung der erzählerischen Anteile:
-Bei vielen Wahlmöglichkeiten zählen Counter mit. Für den Nutzer ist das nicht einsehbar. Beispiel: Figur stammt vom Land, geht einem körperlichen Beruf nach und treibt viel Sport oder Ähnliches – hier würde der Counter für das Attribut Stärke/Gewandtheit hochzählen und sich am Ende als Modifikator aufs Würfelergebnis auswirken. 
+Was passiert mit dem Grundfragenpool im Laufe der Generierung?
 
-- 	Der Kooperationsmodus ist ähnlich aufgebaut, aber hier können mehrere Personen zeitgleich arbeiten. 
+die Anwendung geht während der Frage/Antwort-Phase auf Nutzereingaben ein und bearbeitet kontinuierlich den Fragenpool
+das führt zu einem zunehmend individualisierten Pool
+der schlussendliche, individualisierte, Fragenpool basiert also auf allen vorherigen Nutzereingaben
 
-__________________________________________
-Ablauf
-__________________________________________
+Frage/Antwort-Phase
 
+zu Beginn ist der Grundfragenpool sehr groß
+die Fragenreihenfolge gliedert anhand von festgelegten Kategorien 
+der Nutzer durchläuft nacheinander Fragen und wählt passende Antworten für seine Figur aus
+die Anwendung übermittelt die entsprechenden Werte und verkleinert den Fragenpool laufend
+Werteberechnung
 
+erfolgt nach der Generierung der erzählerischen Anteile
+bezieht sich direkt auf die Antworten der Fragen/Antwort-Phase
+je nach Antwort laufen im Hintergrund Counter mit
+
+Beispiel: Figur stammt vom Land, geht einem körperlichen Beruf nach und treibt viel Sport oder Ähnliches – hier würde der Counter für das Attribut Stärke/Gewandtheit hochzählen und sich am Ende als positiver Modifikator auf den Würfelwurf auswirken.
+Weitere Funktionen
+
+(Diese werden wohl z.T. erst nach der vollständigen Realisierung des Generators umgesetzt.)
+ 
+Kooperationsmodus
+für beliebig viele Nutzer
+richtet sich an Spieler und Spielleiter
+gemeinsam können
+Kontakte von Spielerfiguren erstellt werden
+neue Figuren angelegt werden
+ 
+Account-Verwaltung und Bibliothek	
+erstelle Figuren können in der Bibliothek gespeichert, geteilt und eingesehen werden
+Suchfunktion für öffentliche Inhalte
+Figuren sind bewertbar, kommentierbar und importierbar
+
+Erweiterbarkeit
+Nutzer sollen die Anwendung durch neue Systeme und angepasste Einstellungsoptionen erweitern können
+Beispiel
+
+Rolle und Typ bestimmen die Art des Grundfragenpools und den Detailgrad
+
+Hauptfigur (Typ: Antagonist) erhält andere und detailliertere Fragen als eine neutral-gesinnte Nebenfigur
+
+Aufgrund der Vorauswahl von z.B. Rasse und Spielsystem fallen einige unpassende Fragen direkt zu Anfang weg
+
+Wird NICHT Sci-Fi gewählt, fallen alle Fragen/Antworten weg, die ausschließlich in einen Sci-Fi-Hintergrund passen
+
+Anwendung merkt sich Entscheidungen des Nutzers und passt sich während der weiteren Generierung an diese an
+
+“Wege” können sich verschließen oder bei entsprechender hoher Anzahl von passenden späteren Antworten (wieder) öffnen
+
+Anwendung ist in der Lage Vorschläge zu machen und Konflikte hervorzuheben
+das geschieht dann, wenn sie merkt, dass eine spätere Auswahl eine frühere revidieren könnte
+Interaktion
+ 
 Erste Form – klassisches EVA-Prinzip bei hierarchischen Fragestellungen
-
+ 
 E: Nutzer soll eine Auswahl aus verschiedenen Antworten treffen, um eine Frage zu beantworten.
-V: Das Programm generiert basierend auf der Nutzereingabe (für den Nutzer nicht einsehbar) passende weitere Fragen und Auswahlmöglichkeiten. 
+V: Das Programm generiert basierend auf der Nutzereingabe (für den Nutzer nicht einsehbar) passende weitere Fragen und Auswahlmöglichkeiten.
 A: Gibt die nächste Frage aus, Nutzer wählt erneut aus, usw.
-
+ 
 Zweite Form - Sinnvolle Kombinationen finden auf globaler Ebene
-
+ 
 E: wie oben
-V und R (Reaktion): Das Programm muss Kombinationen bilden können, um auf globaler Ebene zu funktionieren – hier kommen die Abhängigkeiten ins Spiel. Hat eine Figur x und y gewählt, dann kann sie nicht mehr z wählen. Hätte sie nur x oder y gewählt, könnte sie z wählen. Das Programm soll möglichst sinnvoll auf Nutzereingaben reagieren. Es streicht also konsequent Fragen oder Antworten aus späteren Kategorien – oder aber wählt besonders passende Fragen und Antworten heraus, die aufgrund der Kombination vorheriger Eingaben besonders interessant scheinen. 
-
+V und R (Reaktion): Das Programm muss Kombinationen bilden können, um auf globaler Ebene zu funktionieren – hier kommen die Abhängigkeiten ins Spiel. Hat eine Figur x und y gewählt, dann kann sie nicht mehr z wählen. Hätte sie nur x oder y gewählt, könnte sie z wählen. Das Programm soll möglichst sinnvoll auf Nutzereingaben reagieren. Es streicht also konsequent Fragen oder Antworten aus späteren Kategorien – oder aber wählt besonders passende Fragen und Antworten heraus, die aufgrund der Kombination vorheriger Eingaben besonders interessant scheinen.
+ 
 Dritte Form – Konflikte ausfindig machen und Vorschläge machen
-
+ 
 E: wie oben
 V und R: Das Programm wertet bisher erfolgte, gespeicherte, Nutzereingaben auch auf bereits abgeschlossene Fragenstellungen an. Das heißt, dass bei entsprechender Eingabe auch im Nachhinein, auf alte Fragen verwiesen wird, falls ein „Konflikt“ auftaucht.
-Beispiel: Die Figur soll besonders tierlieb sein. Später wählt der Nutzer den Beruf Schlachter. Nun verweist das Programm auf die entsprechende Stelle, bietet einen Alternativvorschlag oder fordert den Nutzer dazu auf, den Konflikt näher zu beschreiben.
+Beispiel: Die Figur soll besonders tierlieb sein, er könne niemals ein Tier verletzen. Später wählt der Nutzer den Beruf Schlachter. Nun verweist das Programm auf die entsprechende Stelle, bietet einen Alternativvorschlag oder fordert den Nutzer dazu auf, den Konflikt näher zu beschreiben.
 
-******************************************************************************
+(Anmkerung vom 10.10.2016:
 
+Ich habe die Beschreibung nochmal gekürzt und versucht sie durch Stichpunkte lesbarer zu gestalten.
 
+) 
 
-(Anmerkung: 
-
+(Anmerkung vom 8. August:
+ 
 Ich habe versucht den Text auf die wesentlichen Elemente herunterzubrechen und hoffe, dass er so überschaubarer ist. Auch habe ich versucht die Interaktionsmöglichkeiten konkreter zu benennen und mehr auf den eigentlichen Ablauf einzugehen.
-
+ 
 Ich werde jetzt hier gesondert auf ihr Feedback eingehen, weil ich viele Punkte auf die Sie sich bezogen haben, in der neuen Version gar nicht mehr so detailliert beschreibe oder abgeändert habe und ich nicht möchte, dass es so wirkt, als würde ich nicht auf ihre Kritik eingehen. Ich hoffe, dass das in Ordnung ist.
-
-Vielen Dank für den Link bezüglich der Abenteuerbücher. Ich kannte ähnliche Bücher von früher und wusste gar nicht, dass solche Reihen online existieren, aber finde das sehr spannend. 
-
+ 
+Vielen Dank für den Link bezüglich der Abenteuerbücher. Ich kannte ähnliche Bücher von früher und wusste gar nicht, dass solche Reihen online existieren, aber finde das sehr spannend.
+ 
 Ich war mir zunächst nicht sicher wieso sie die Beschränkung auf zwei Personen für sinnlos halten, aber ich glaube, dass ich sie da zunächst missverstanden hatte. Die entsprechende Beschränkung habe ich entfernt. Jetzt soll es auch möglich sein über den Kooperationsmodus Figuren zu erstellen, die keine Kontakte sind – mit beliebig vielen Leuten gleichzeitig.
-
-Auch der Punkt, dass an einer bestimmten Stelle die Generierung der biographischen Anteile erfolgt und der Nutzer die Reihenfolge nicht selbstbestimmen kann, hat mich zunächst irritiert. Ich glaube, dass mein vorheriger Text an vielen Stellen unverständlich oder irreführend war. Die vorgegebene Reihenfolge ist eigentlich nur programmtechnisch gemeint – das bedeutet, dass das Generieren der Fragenpools abhängig von der Grundauswahl des Nutzers ist. Daher kann erst dann damit begonnen werden, nachdem der Nutzer z.B. Abenteuerart und Setting ausgewählt hat. Ansonsten schränke ich den Nutzer hier nicht ein und die Vorauswahl ist sehr minimiert gehalten.
-
-Ich hoffe wirklich sehr, dass die gegenwärtigen Änderungen in die richtige Richtung gehen und freue mich aufs nächste Feedback.
-
+ 
+Auch der Punkt, dass an einer bestimmten Stelle die Generierung der biographischen Anteile erfolgt und der Nutzer die Reihenfolge nicht selbstbestimmen kann, hat mich zunächst irritiert. Ich glaube, dass mein vorheriger Text an vielen Stellen unverständlich oder irreführend war. Die vorgegebene Reihenfolge ist eigentlich nur programmtechnisch gemeint gewesen – das bedeutet, dass das Generieren der Fragenpools abhängig von der Grundauswahl des Nutzers ist. Daher kann erst dann damit begonnen werden, nachdem der Nutzer z.B. Abenteuerart und Setting ausgewählt hat. Ansonsten schränke ich den Nutzer hier nicht ein und die Vorauswahl ist sehr minimiert gehalten.
+ 
+Ich hoffe wirklich sehr, dass die gegenwärtigen Änderungen in die richtige Richtung gehen und freue mich aufs nächste Feedback.)
+ 
 *
 
-Eine etwas anschaulichere Version des Textes können Sie, wenn Sie mögen, hier einsehen: https://docs.google.com/document/d/1a620CZdZxkBEZM4UboCVd3AAZPHF7xmTcpjtatxIlsA/edit#
-
-===========================================
 
 
 
+
+Zu den Tabellen
 
-
-
-
-
-============================================
-=== Projektidee ColePfeiffer, 2016-07-12 ===
-===========================================
-
-Kurz und knapp: Ich bin ein großer P&P-Rollenspielfan. Als Spielleiter ist es für fast jedes eigene Abenteuer nötig, sich Nichtspielercharaktere auszudenken, die häufig nur in einem Abenteuer auftauchen und somit den Aufwand der Erstellung kaum rechtfertigen. Die Anwendung soll diesen Prozess schneller- und einfacher machen.
-
-
-Hauptfunktionen der Anwendung
-
-
-	-	Auswürfeln der reinen Werte - angepasst ans jeweilige Spielesystem 
-	-	interaktiver Charakterhintergrundgenerator, der die erzählerischen Aspekte des Charakters abdeckt (z.B. Werdegang, Moral)
-	-	Kooperationsmodus für das Erstellen von Kontakten von Spielfiguren: Spielleiter und Spieler können synchron an Figuren arbeiten.
-	
-	- 	Accountverwaltung und eigene Inhalte
-	
-		-	nach einer Accounterstellung können Charaktere in einer Bibliothek abgespeichert und verwaltet werden
-		-	Nutzer können die Anwendung durch neue Systeme, Settingvorgaben und individuell angepasste Einstellungsoptionen bei der Hintergrundgenerierung erweitern;
-		-	alle öffentlichen, nutzergenerierten Inhalte können von anderen Usern über eine filterbare Suchfunktion eingesehen, bewertet und kommentiert werden; zudem lassen sie sich in die eigene Bibliothek importieren#
-		
-____________________________________________________________________________________________________________________________
-
-					Details
-____________________________________________________________________________________________________________________________
-
-Details zum Ablauf
-
-
-Sowohl bei der Wertegenerierung als auch beim Generieren des Charakterhintergrunds nimmt der Nutzer zunächst Anpassungen vor:
-Er wählt sein Spielsystem, das Setting, sowie die Abenteuerart (z.B. Stadt, Detektivabenteuer) und die Wichtigkeit der Figur (z.B. storyrelvant) oder ihre Funktion (z.B. Zeuge). Darüber hinaus können weitere optionale Anpassungen vorgenommen werden (z.B. Geschlecht oder Name).
-
-Jetzt kann der Nutzer zwischen zwei Erstellungsverfahren wählen:
-
-1. Erst die Werteberechnung, dann die Hintergrundgenerierung
-	- das ist dann sinnvoll, wenn der Nutzer eine Figur erstellen will, die schon im Vorhinein größtenteils feststeht
-	- hier würde das Programm auf die Werte eingehen und basierend auf Stärken und Schwächen Vorschläge machen. 
-
-2. Erst die Hintergrundgenerierung, dann die Werteberechnung
-	- dann sinnvoll, wenn man noch nicht genau weiß in welche Richtung es gehen soll, aber man Werte möchte, die sich nach der Lebensgeschichte der Figur richten 
-	- Hier würden sich Nutzerantworten am Ende auf die Werteberechnung in Form von Würfelmodifikatoren auswirken. (Ich würde hier wohl mit Zählern arbeiten, also z.B. "StärkeCounter++;" oder Ähnliches.)
-	
-Danach schlüpft der Nutzer in die Rolle der Figur und durchlebt einzelne Lebensabschnitte in Form eines textbasierten "Entscheidungsspiels". Die Bezeichnung trifft es nicht ganz und resultiert aus einer Ermanglung eines besseren Wortes, aber das Ganze lässt sich vielleicht mit Kinderbüchern, die in Abhängigkeit von Entscheidungen auf eine bestimmte Seitenzahl verweisen, vergleichen. Nur, dass sich die Anwendung die Entscheidungen des Nutzers merkt und sich während der Generierung daran anpasst. Ich werde wohl hauptsächlich mit Flags und Countern arbeiten, um das zu realisieren.
-
-Je nach Voreinstellungen startet die Hintergrundgenerierung mit unterschiedlichen oder angepassten Fragen- und Antwortstellungen, daher sind diese essentiell. Hier würde ich dann wohl Pools setzen, also je nach System oder Sinn und Zweck der Figur - einfach deswegen, weil sich die Fragen nach eben diesen Punkten richten müssen, um eine gewisse Relevanz hineinzubringen. (...)
-
-____________________________________________________________________________________________________________________________
-
-Zum Kooperationsmodus (webbasiert)
-
-Änderungen werden möglichst in Echtzeit auf beiden Rechnern gezeigt. Über Mikrofon kann miteinander kommunziert werden.
-Spielleiter und Spieler einigen sich auf grobe Rahmenbedingungen, wie Setting usw. Danach beginnt die Generierung der erzählerischen Anteile. Hier entscheidet größtenteils der Spieler über Details, aber je nach Loyalitätsstufe und Kenntnisgrad des Kontakts tauchen ab und zu Fragestellungen auf, die sich ausschließlich an den Spielleiter richten. Dem Spieler bleiben sie verborgen. Auch hier macht die Anwendung Vorschläge, wenn sie einen Trend in eine bestimmte Richtung erkennen kann. 
-
-
-Beispiel: 
-
-Spieler möchte für seine Figur Thorin den Bekannten XY erstellen. Spieler und Spielleiter geben zunächst das Geschlecht, den Namen, das Setting usw. ein und einigen sich auf die Loyalitätsstufe und den Kenntnisgrad seines neuen Kontaktes. Beide Faktoren sind für die verdeckten Fragen relevant. Nun beantwortet der Spieler, ähnlich wie beim Hintergrundgenerator, Fragen zu seinem Charakter. Der Spielleiter verfolgt die Eingaben in Echtzeit. Eine verdeckte Frage könnte z.B. wie folgt aussehen:
-"Welche Geheimnisse hat Bekannter XY vor Thorin?"
-Abhängig von einem Würfelwurf mit einem Modifier je nach Kenntnisgrad wird zunächst ermittelt, ob es ein Geheimnis gibt und wenn ja, wie groß das Geheimnis ist. Anschließend werden Vorschläge gemacht - der Spielleiter kann hier aber auch selbst etwas eintragen. Währenddessen wird dem Spieler angezeigt, dass der Spielleiter eine verdeckte Frage beantwortet - natürlich ohne sie dem Spieler aufzudecken.
-	
-____________________________________________________________________________________________________________________________
-
+Link (*) - versuche gerade den generellen Aufbau der Fragen/Antwort-Gruppierungen zu definieren, um die spätere Strukturierung einfacher zu gestalten. Ist noch unvollständig und beispielhaft, aber dient der Wegfindung.
 
 ===================================
 === Feedback Alpers, 2016-04-12 ===

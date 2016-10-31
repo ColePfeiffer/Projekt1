@@ -221,3 +221,65 @@ Wertung 2: Projektbeschreibung: gesamt: 4 / 10
 Leider keine Änderungen seit dem letzten Feedback. 
 
 Bitte beachten Sie, dass eine der Voraussetzungen zum Erhalt des Leistungsnachweises darin besteht, dass Sie kontinuierlich am Projekt arbeiten. Wie schon mehrfach erklärt gilt: Kontinuierliches Arbeiten bedeutet jede Woche am Projekt zu arbeiten. Und da für das Projekt ein Arbeitsaufwand von 80 Stunden (innerhalb der 16 Wochen Vorlesungszeit) aufgebracht werden soll, bedeutet das, dass Sie pro Woche 5 Stunden für das Projekt investieren müssen. Wenn Sie weiterhin deutlich weniger am Projekt arbeiten, dann muss ich es auf der Basis des aktuellen Stands bewerten.
+
+===================================
+=== Feedback Alpers, 2016-10-31 ===
+===================================
+
+=== 1.) Formales
+
+== 1.1.) Keine erkennbaren Stichpunkte.
+
+Leider ist bei Ihnen nicht erkennbar, was Stichpunkte sind und wozu sie gehören. Bitte nutzen Sie Spiegelstriche, Nummerierungen oder sonst ein System, um diese erkennbar zu machen. Diese Dokument soll dazu dienen, damit beliebige Personen sich schnell einen Überblick über das Projekt verschaffen können.
+
+== 1.2.) Keine erkennbare Trennung zwischen Inhalt und Ablauf.
+
+Leider führen Sie Inhalte (woraus besteht die Anwendung) und Abläufe (wie ändern sich die Inhalte) gemischt auf. Dadurch ist es sehr wahrscheinlich, dass bei der Umsetzung etwas übersehen wird.
+
+== 1.3.) Zu umfangreiche Beschreibungen.
+
+Ein weiterer Grund, aus dem es schwierig ist, einen schnellen Überblick zu erhalten besteht darin, dass Sie zu umfangreich beschreiben. Hier ein Bsp.:
+
+= Beginn =
+NSC-Generator 
+für Pen & Paper-Systeme  
+
+Kurzbeschreibung
+Warum ein NSC-Generator?
+
+Ich bin ein großer P&P-Rollenspielfan. Als Spielleiter ist es für fast jedes eigene Abenteuer nötig, sich Nichtspielercharaktere auszudenken. Diese spielen häufig nur in einem Abenteuer mit, aber die Erstellung ist stets mit einem hohen Zeitaufwand verbunden.
+Was macht die Anwendung?
+ 
+Die Anwendung richtet sich in erster Linie an Spielleiter von Rollenspielsystemen und ist als Generator zu verstehen. Sie soll dem Nutzer bei der Erstellung der erzählerischen Anteile helfen und den kreativen Prozess durch zur Figur passende Vorschläge und Fragestellungen vereinfachen. 
+= Ende =
+
+Das ergibt als knappe Zusammenfassung:
+
+= Beginn =
+NSC-Generator für Pen & Paper-Rollenspiele 
+= Ende =
+
+Alles andere wiederholt lediglich das, was in dieser Zusammenfassung steht (Z.B. Die Anwendung ...  ist als Generator zu verstehen.) oder geht auf Details ein, die für einen Marketingtext bzw. eine Bewerbung sinnvoll sein könnten.
+
+Hier ein weiteres Beispiel:
+
+= Beginn =
+Das bedeutet
+
+Nutzer und Anwendung stehen in einem Austausch miteinander
+die Anwendung geht auf Nutzereingaben ein- und gibt dem Nutzer individualisierte Ausgaben
+die Werteberechnung der Attribute erfolgt am Ende dynamisch anhand der Antworten über Würfelmodifikatoren (siehe Werteberechnung)
+= Ende =
+
+Nutzer und Anwendung stehen in einem Austausch miteinander
+-> Wenn das nicht zutreffen würde, wäre es keine Anwendung.
+
+die Anwendung geht auf Nutzereingaben ein- und gibt dem Nutzer individualisierte Ausgaben
+-> Das ist eine Wiederholung der letzten Zeile und der Anforderung an alle Projekte.
+
+die Werteberechnung der Attribute erfolgt am Ende dynamisch anhand der Antworten über Würfelmodifikatoren (siehe Werteberechnung)
+-> Damit legen Sie fest, dass Nutzer zuerst alle Eingaben erstellen sollen und dann ein Ergebnis bekommen. Das entspricht dem EVA-Modell, das gerade das Gegenteil dessen ist, was Sie entwickeln sollen.
+
+== 1.5.) Zusammenfassung
+
+Leider schweifen Sie immer noch viel zu sehr aus und machen es nötig, dass andere Personen viel Zeit investieren müssen, um einen Überblick über die Anwendung zu bekommen. Damit ist der aktuelle Stand nicht bewertbar.

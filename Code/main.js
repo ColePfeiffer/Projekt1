@@ -305,6 +305,13 @@ addQuestion.prototype.addAnswer = function addAnswer(answerTxt, answerExclusionT
   }
 };
 
+// Funktion innerhalb von addQuestion, die es erlaubt neue Fragen in das entsprechende answerArray das zuletzt erstellte addQuestions-Objekts zu speichern
+function addAnswerToRecent(answerTxt, answerExclusionTags, tagsToAdd) {
+  
+  allQuestions[(allQuestions.length)-1].addAnswer(answerTxt, answerExclusionTags, tagsToAdd);
+}
+
+
 // **************************
 // Tags und Filterung
 // *************************
@@ -479,17 +486,66 @@ function showModifier() {
 
 // Hinzufügen von Fragen
 // Wir brauchen keine Funktion zur Bezeichnungsgenerierung, weil wir mit this in ein externes Array speichern und über den Index an das Objekt kommen können
-new addQuestion(3, "Wie sind die Eltern deiner Figur ums Leben gekommen?", "parentsAlive#statist#parentsUnknown");
-allQuestions[0].addAnswer("Dorf", " ", "#OriginVillage");
-allQuestions[0].addAnswer("Stadt", " ", "#OriginCity");
-allQuestions[0].addAnswer("Abseits der Zivilisation", "#", "#OriginLonewolf");
+
+// Erstmal größtenteils Beispielhaft
+new addQuestion(1, "Wie und wo wuchs die Figur auf?", "origin#extra#minor ");
+// Hinzufügen von Antworten
+addAnswerToRecent("Du bist als einfacher Sohn einer einfachen Familie erzogen worden. Die passenste Beschreibung für deine Familie wäre Bauern gewesen, doch gab es im Dorf abhängig von der Jahreszeit Vielerlei zu tuen.", "shadowrun#main#upperClass", "originVillage#midgard");
+addAnswerToRecent("Seit du dich erinnern kannst lebst du in der Stadt. Sowohl Tags als auch Nachts bist du schon durch jede Gasse gestreift. Du weißt wo es sicher ist und welchen Ausweg du brauchst, wenn es brenzlig wird.", "shadowrun#upperClass", "originCity");
+addAnswerToRecent("Die genauen Umstände deiner Herkunft sind dir nicht bekannt. Alles was du weißt ist, dass ein Eremit dich bei der Leiche eines Mannes gefunden hat. Er ist an zwei Pfeilen, die ihm im Rücken steckten, verendet. ", "shadowrun#parentsKnown#extra", "asideCivilisation#parentsUnknown#main");
+addAnswerToRecent("Du wurdest in einer Zeit großer Migration geboren. Als Nomade findest du einen Weg zu überleben, egal in welchem Terrain.", "shadowrun", "originNomad");
+addAnswerToRecent("Dir waren die Chancen für ein aufrechtes Leben gegeben. In dir hat jedoch immer der Zwang gesteckt, insgeheim Norm und Regeln zu brechen, zu manipuliern und zu stehlen. Letztenendes hat dich die Straße am meisten gelehrt.", "", "originstreetSmart");
+addAnswerToRecent("Für dich gibt es kaum etwas anderes, als im Schatten der Megaplexe nach einem Strich Sonne zu jagen. Im riesigen Slum, das sich um die gesicherten Städte herum ausbreitet, geboren, hast du von klein auf gelernt mit allen Mitteln um dein Leben zu kämpfen.", "midgard#highSociety#upperClass", "originSlum");
+addAnswerToRecent("Durch deine Geburt und Kindheit auf See ist es immer seltsam für dich auf Land zu sein. Geflohen aus ihrer Heimat hatten deine Eltern keine andere Wahl als den unsicheren Weg über Fluss und Meer auf sich zu nehmen.", "", "originBoat");
+
+new addQuestion(1, "Welchen Lebensstil hat die Figur genossen?", " ");
+// 
+addAnswerToRecent("Als Kind hattest du kaum das Nötigste und konntest nur durch Betteln und Tagelohn über Wasser halten.", "rich#upperClass#middleClass", "lowerClass");
+addAnswerToRecent("Mit vielen Geschwistern aufgewachen, die alle im Haushalt mit angepackt haben, hast du ein glückliches aber einfaches Leben genießen können.", "upperClass#rich#poor", "humbleHome");
+addAnswerToRecent("Deine Umstände sind durchschnittlich. Es gab während deiner Kindheit selten Ernteausfälle und du konntest dir mit etwas Geschick ein wenig Luxus gönnen.", "upperClass#lowerClass", "middleClass");
+addAnswerToRecent("Seit Jahrhunderten angesehen, steht auch in deiner Generation dein stolzes Haus an der Runde des Königs. Man gewährt dir den entsprechenden Luxus und begegnet dir mit Respekt oder muss die Konsequenzen fürchten.", "poor#lowerClass#middleClass", "highSociety#upperClass#noble#rich");
+addAnswerToRecent("Als Teil des wandernden Volkes lebt dein Wohlbefinden von der Güte des Publikums und dem Reiz der Zauber die deine Familie in die Welt führt. Einige fette Tage helfen euch zu großer Bekanntheit und an magerern habt ihr Geschichten für einander, um den Blick zu erhellen. ", "lowerClass#middleClass#upperClass", "unconventional");
+
+
+new addQuestion(1, "Wer kümmerte sich um deine Figur in ihrer Kindheit?", "extra");
+// 
+addAnswerToRecent("Du hattest eine unproblematische Kindheit mit zwei liebevollen Eltern, die in guter Gesundheit und Beziehung dich auf deinem Weg zum Erwachsenen begleitet haben.", "parentsUnknown", "guardianParents#parentsKnown#legalGuardian");
+addAnswerToRecent("Seit du dich erinnern kannst, bist du in der Obhut deines Onkels und seiner Frau. Weshalb, wollen dir deine Verwandten nicht verraten und wann immer du danach fragst wirst du forsch abgewiesen.", "parentsKnown", "guardianCloseRelatives#legalGuardian");
+addAnswerToRecent("Mit 5 Jahren bist du aus dem Waisenhaus adoptiert worden. Du verstehst dich gut mit deinen Zieheltern, auch wenn sie hohe Erwartungen von dir haben.", "parentsKnown", "guardianAdopted#legalGuardian");
+addAnswerToRecent("Traditionell bist du als ältestes Kind bei einem Meister in die Lehre gegangen und hast deine Famile verlassen. Der Abschied viel dir schwer bis du erfahren hast, dass sie dafür in Gold entlohnt werden und du realisierst wie wenig du ihnen bedeutest.", "parentsKnown", "guardianApprentice#legalGuardian");
+addAnswerToRecent("Ständig auf dich allein gestellt, weil deine Eltern auf wochenlangen Jagd- und Raubzügen sind, lebst du von dem was dein Umfeld dir gibt.", "parentsKnown", "noGuardian#independent");
+
+new addQuestion(1, "Eines Tages ermöglicht es sich dir, dass du dich auf eigene Faust unterwegs machst. Ergreifst du diese Chance?", "extra#minor#noGuardian");
+//
+addAnswerToRecent("Alles gelernt was dein Mentor dir beibringen kann, hast du genug davon von ihm zurückgehalten zu werden. Es gibt nur eins zu tuen und zwar deinen eigenen Weg zu ebnen.", "guardianParents#guardianCloseRelatives#guardianAdopted#noGuardian", "leftApprentice");
+addAnswerToRecent("Nur daran zu denken zerbricht deinen Eltern das Herz und du willst nicht die Verbindung zu ihnen verlieren. Du entscheidest dich aus Respekt heraus bei ihnen zu bleiben.", "guardianApprentice#noGuardian", "lovingFamily");
+addAnswerToRecent("Auch wenn es dir schwer fällt, kannst du dein Verlangen die Welt zu sehen nicht mehr zurückhalten und brichst auf.", "noGuardian", "leftGuardian");
+addAnswerToRecent("Nach einem Streit mit deinen Eltern verlässt du deine Heimat mit einem Groll. Weshalb deine Eltern dich klammerhaft aufhalten begreifst du nicht.", "guardianApprentice#noGuardian", "leftGuardian#tornFamily");
+
+new addQuestion(2, "Um deine Entwicklung zu fokussiern wurdest du einem Lehrer zugeteilt. Worin hat er deine Ausbildung besonders geprägt?", "extra#minor#guardianApprentice#noGuardian");
+//
+addAnswerToRecent("Zu Beginn war klar zu erkennen, dass dich besonders dein Intellekt ausmacht. Dein Meister hat dich verschiedene Studien gelehrt und realisiert, dass du ein Talent für die Heilkunde besitzt.", "stupid#talentless", "trainingHealer");
+addAnswerToRecent("Körperliche Attribute stachen bei dir schon immer hervor, also hat dein Lehrer dir die nächst beste Waffe zugeschmissen und auf dich eingedroschen! Schnell wurde dir klar, dass du mit einem Speer am wenigsten Prügel einstecken musst.", "shadowrun", "trainingSpear");
+
+
+new addQuestion(2, "Um deine Entwicklung zu fokussieren hat dein Meister dir eine Disziplin aufgetragen. Welche hat dich besonders geprägt?", "extra#minor#guardianApprentice#guardianParents#guardianCloseRelative#noGuardian#guardianAdopted");
+// 
+addAnswerToRecent("Zu Beginn war klar zu erkennen, dass dich besonders dein Intellekt ausmacht. Dein Meister hat dich verschiedene Studien gelehrt und realisiert, dass du ein Talent für die Heilkunde besitzt.", "stupid#talentless", "trainingHealer");
+addAnswerToRecent("Körperliche Attribute stachen bei dir schon immer hervor, also hat dein Lehrer dir die nächst beste Waffe zugeschmissen und auf dich eingedroschen! Schnell wurde dir klar, dass du mit einem Speer am wenigsten Prügel einstecken musst.", "shadowrun", "trainingSpear");
+addAnswerToRecent("Abhängig von den Fähigkeiten deines Meisters war dein Training besonders auf Schusswaffen fokussiert.", "midgard", "trainingGuns");
+
+
+/*new addQuestion(3, "Wie sind die Eltern deiner Figur ums Leben gekommen?", "parentsAlive#statist#parentsUnknown");
+addAnswerToRecent("Dorf", " ", "#blubb");
+addAnswerToRecent("Stadt", " ", "#OriginCity");
+addAnswerToRecent("Abseits der Zivilisation", "#", "#OriginLonewolf");
 
 new addQuestion(1, "Wie und wo wuchs die Figur auf?", " ");
 // Hinzufügen von Antworten
-allQuestions[1].addAnswer("Dorf", " ", "#OriginVillage");
-allQuestions[1].addAnswer("Stadt", " ", "#OriginCity");
-allQuestions[1].addAnswer("Abseits der Zivilisation", "#", "#OriginLonewolf");
-allQuestions[1].addAnswer("Kein festes Zuhause, stets auf der Durchreise", "#", "#OriginNormade");
+addAnswerToRecent("Dorf 2", " ", "#OriginVillage");
+addAnswerToRecent("Stadt", " ", "#OriginCity");
+addAnswerToRecent("Abseits der Zivilisation", "#", "#OriginLonewolf");
+addAnswerToRecent("Kein festes Zuhause, stets auf der Durchreise", "#", "#OriginNormade");
 
 new addQuestion(1, "Ursprünglicher sozialer Status deiner Figur", " ");
 // 
@@ -514,16 +570,16 @@ new addQuestion(1, "Wieso wuchs deine Figur ohne ihre leiblichen Eltern auf?", "
 allQuestions[4].addAnswer("Verstorben (Waise)", "#", "#");
 allQuestions[4].addAnswer("Verschollen", "#", "#");
 allQuestions[4].addAnswer("Verlassen", "#", "#");
-allQuestions[4].addAnswer("institutionell Aufgewachsen (Internat)", "#", "#");
+allQuestions[4].addAnswer("institutionell Aufgewachsen (Internat)", "#", "#");*/
 
 //Test
 new addQuestion(1, "Test, geht nicht, wenn male", "male");
-allQuestions[5].addAnswer("Muh", "#", "#");
-allQuestions[5].addAnswer("Mah", "#", "#");
+addAnswerToRecent("Muh", "#", "#");
+addAnswerToRecent("Mah", "#", "#");
 
 new addQuestion(2, "Geht nicht, wenn male oder shadowrun", "male#shadowrun");
-allQuestions[6].addAnswer("1234", "#", "#");
-allQuestions[6].addAnswer("32392", "#", "#");
+addAnswerToRecent("1234", "#", "#");
+addAnswerToRecent("32392", "#", "#");
 
 // **************************
 // Testfeld für Methoden und alles andere!
